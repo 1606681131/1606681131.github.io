@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>曾俊菁Web实验报告-20230915</title>
+ </head>
+<style type="text/css">
+a
+{
+text-align:center;
+color:purple;
+padding:5px;
+margin:10px;
+}
+</style>
+
+ <body>
+  <h1  align="center">
+   <font size="6"   face="黑体">
+   一、文献简介
+  </h1>
+   </font>
+<p>
+ <font size="4"   face="黑体">
+读了《The Linux Command Line A Complete Introduction》的前两章，我理解和掌握了以下知识：<br>
+1.命令历史记录：如果按下键盘的向上箭头，就可以看到上一条执行的命令重复出现。按下向下箭头，前面的命令就会消失。左右箭头可以将光标定位在命令行的任意位置。<br>
+2.快速复制粘贴：如果通过按住鼠标左键并将鼠标拖动在其上（或双击一个单词）来突出显示某些文本，它将复制到x维护的缓冲区中。按下鼠标中键将导致文本粘贴在光标位置。不要使用ctrl-C和ctrl-V在终端窗口内执行复制和粘贴，没有用。<br>
+3.命令date：能够显示当前的时间和日期。<br>
+4.命令cal：默认情况下，它会显示当前月份的日历。<br>
+5.命令df：查看磁盘驱动器上的当前可用空间量。<br>
+6.命令free：显示空闲内存的数量。<br>
+7.命令pwd：显示当前的工作目录。<br>
+8.命令ls：列出当前工作目录中的文件和目录。<br>
+9.命令cd：更改工作目录。<br>
+10.虽然Linux支持可能包含嵌入式空格和标点字符的长文件名，但需将创建的文件名称中的标点字符限制为句点、破折号和下划线。最重要的是，不要在文件名中嵌入空格。如果要在文件名中表示单词之间的空格，请使用下划线字符。<br><br>
+ </font>
+</p>
+
+ <h2  align="center">
+ <font size="6"   face="黑体">
+   二、任务操作步骤
+ </h2>
+
+ <p>
+  <font size="5"   face="黑体">
+  课堂任务
+  </p>
+
+  <p>
+    <font size="4"   face="黑体">
+
+1.在个人文件夹（Zengjunjing）中建立一个pdf文件夹：mkdir pdf<br>
+2.将三本文献放入pdf文件夹中：mv *.pdf pdf<br>
+3.在个人文件夹（Zengjunjing）中建立一个txt文件夹：mkdir txt<br>
+4.将.txt作业放入txt文件夹中：mv *.txt txt<br>
+5.在个人文件夹（Zengjunjing）中建立一个mp3文件夹：mkdir mp3<br>
+6.将存放在D盘根目录下的两个mp3文件移动到mp3文件夹中：mv /d/*.mp3 /d/Zengjunjing/mp3<br>
+7.在个人文件夹（Zengjunjing）中建立一个html文件夹：mkdir html<br>
+8.将存放在D盘根目录下的html文件移动到html文件夹中：mv /d/new.html /d/Zengjunjing/html<br>
+
+9.查看个人文件(Zengjunjing)中的所有文件及目录：ls -R<br>
+10.查看html文件的文本内容：①cd html   ②cat news.html<br>
+  </p>
+
+  <p>
+  <font size="5"   face="黑体">
+  课后任务
+  </p>
+
+  <p>
+  <font size="4"   face="黑体">
+ 一、用tar -xf videoClips命令解包：<br>
+   1.在gitbash中输入tar -xr videoClips命令得到解包文件videoMP4<br>
+ 二、删除下载的的包文件，列出解包的文件：<br>
+   1.进入个人文件夹：cd /d/Zengjunjing<br>
+   2.删除包文件：rm videoClips<br>
+   3.列出解包文件：ls videoMP4<br>
+ 三、管理MP3文件<br>
+   1.下载MP3文件到d盘<br>
+   2.将文件移动到个人文件夹中的MP3：mv /d/LinuxCMD-2.mp3/ /d/Zengjunjing
+  </font>
+ </p>
+<h2  align="center">
+  <font size="6"   face="黑体">
+   三、课堂总结
+ </h2>
+
+<p>
+  <font size="4"   face="黑体">
+从课堂上我学到了以下知识：<br>
+1.命令mkrid：通过 mkdir 命令可以实现在指定位置创建以 DirName(指定的文件名)命名的文件夹或目录。要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)<br>
+2.rm ( remove )：删除文件<br>
+3.-rm -rf 文件夹：（循环递进删除文件夹,不需要二次确认）<br>
+4.mv ( move )：移动文件或重命名<br>
+5.cp ( copy )：复制文件，要注意后面有空格加点<br>
+6.pwd ( print working directory )：查看当前所在路径--绝对路径<br>
+7.cd ( change directory )：切换目标<br>
+8.cd .. ：返回到上一个目录<br>
+9.ls ( list )：查看当前目录下的内容<br>
+10.ls -R命令：能够列出当前工作目录下所有文件及目录并以文件的大小进行排序<br>
+11.cat [文件名]：一次显示整个文件<br>
+12.ls -lh：人性化显示是目录下每个文件的详细信息 , h相当于humanize<br>
+  </font>
+</p>
+ 
+<h2  align="center">
+ <font size="6"   face="黑体">
+   四、历史命令记录
+ </h2>
+
+<p>
+ <font size="4"   face="黑体">
+<pre>
+    1  git init
+    2  cd /
+    3  ls
+    4  git tag
+    5  mkdir Zengjunjing
+    6  cd
+    7  cat filename > /dev/clipboard
+    8  cat filename > /d/ps图片
+    9  cat /d/ps图片 > Zengjunjing
+   10  mkdir /d/Zengjunjing
+   11  history
+   12  mkdir face
+   13  history >work.txt
+   14  cd ..
+   15  cd:\Zengjunjing
+   16  cd:/Zengjunjing
+   17  cp [200~"C:\Users\曾俊菁\OneDrive\桌面\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf" .
+   18  mkdir pdf
+   19  ls
+   20  ls -s
+   21  ls -a -s
+   22  cp "D:\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf" .
+   23  cp /d/资料/JavaWeb/* pdf
+   24  cd ..
+   25  cp /d/资料/JavaWeb/* pdf
+   26  ls pdf
+   27  cd ..
+   28  cp/d/资料/JavaWeb/* pdf
+   29  cd d
+   30  ls
+   31  cd d
+   32  cd/
+   33  cd..
+   34  cd
+   35  cd d
+   36  d
+   37  cd/
+   38  cd d
+   39  mkdir Zengjunjing
+   40  cd /d
+   41  cd /d/Zengjunjing
+   42  cd 资料
+   43  cd/d
+   44  cd..
+   45  cd ..
+   46  cd 资料
+   47  JavaWeb
+   48  cd/d/Zengjunjing
+   49  cd ..
+   50  cd/d/Zengjunjing
+   51  cd /d/Zengjunjing
+   52  cp
+   53  cp /d/资料/JavaWeb/
+   54  cd ..
+   55  cd /d/资料/Java web、
+   56  cd /d/资料/JavaWeb/
+   57  cat
+   58  cd ..
+   59  cd ..
+   60  cd /d
+   61  cd /d/Zengjunjing
+   62  cp /d/资料/JavaWeb/work.txt
+   63  cp /d/资料/JavaWeb/"C:\Users\曾俊菁\OneDrive\桌面\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf"
+   64  cp /d/资料/JavaWeb/The\ Linux\ Command\ Line\ A\ Complete\ Introduction.pdf 
+   65  cp /d/资料/JavaWeb/The Linux Command Line A Complete Introduction.pdf 
+   66  ls
+   67  -a -s
+   68  cd ..
+   69  cd /d/资料/JavaWeb/
+   70  ls
+   71  rm R-C.png 
+   72  cp /d/资料/Zengjunjing/Work.txt
+   73  cp
+   74  cp d
+   75  cd d
+   76  cd /d
+   77  cd /d/Zengjunjing
+   78  ls
+   79  history
+   80  cp
+   81  cp /d/资料/JavaWeb/The Linux Command Line A Complete Introduction.pdf
+   82  cd
+   83  cd /d
+   84  mkdir Zengjunjing
+   85  cd 资料 
+   86  cd JavaWeb/
+   87  ls -R
+   88  ls
+   89  cd /d/Zengjunjing
+   90  cp
+   91  cp /d/资料/JavaWeb/* .
+   92  cp /d/资料/JavaWeb/R-C.png 
+   93  cp /d/资料/JavaWeb/R-C.png .
+   94  rm Eloquent_JavaScript.pdf
+   95  cp /d/资料/JavaWeb/Eloquent_JavaScript.pdf
+   96  cp /d/资料/JavaWeb/Eloquent_JavaScript.pdf .
+   97  history
+   98  history
+   99  history > Work.txt
+  100  cd /d
+  101  cd /d/Zengjunjing
+  102  ls
+  103  cp
+  104  cp /d/资料/JavaWeb/[200~"D:\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf
+  105  q
+  106  cd /d
+  107  cd /d/资料/JavaWeb
+  108  ls
+  109  cd ..
+  110  cd ..
+  111  cd /d/Zengjunjing
+  112  ls
+  113  cp /d/资料/JavaWeb/ Eloquent_JavaScript.pdf
+  114  cp /d/资料/JavaWeb/'Learn CSS in One Day and Learn It Well.pdf'
+  115  cd ..
+  116  cd /d/资料/JavaWeb/
+  117  cp /d/Zengjunjing/Work.txt 
+  118  cp /d/Zengjunjing/Work.txt .
+  119  cp /d/Zengjunjing/R-C.png 
+  120  cp /d/Zengjunjing/R-C.png .
+  121  rm R-C.png 
+  122  rm Work.txt 
+  123  history
+  124  cd /d
+  125  cd /d/Zengjunjing
+  126  rm -rf Zengjunjing
+  127  cd /d
+  128  rm Zengjunjing
+  129  rm -rf Zengjunjing
+  130  mkdir Zengjunjing
+  131  cd /d/Zengjunjing
+  132  cp /d/资料/JavaWeb/* .
+  133  ls
+  134  history
+  135  history > Code.txt
+  136  cp d/ps图片/* .
+  137  cp /d/ps图片/R-C.png
+  138  cd..
+  139  cd ..
+  140  cd /d/ps图片/
+  141  ls
+  142  cd ..
+  143  cd /d/Zengjunjing
+  144  cp /d/ps图片/R-C.png .
+  145  cp /d/ps图片/* .
+  146  cp /d/ps图片/* .
+  147  clear
+  148  cd ..
+  149  cd/d/ps图片
+  150  cd/d/ps图片/
+  151  cd /d/Zengjunjing
+  152  date
+  153  cal
+  154  cd ..
+  155  cd ..
+  156  cal
+  157  cd ..
+  158  clear
+  159  date
+  160  cal
+  161  cd..
+  162  cd ..
+  163  cd ..
+  164  cal
+  165  df
+  166  free
+  167  exit
+  168  pwd/home/me
+  169  pwd
+  170  la
+  171  ls
+  172  cd bin
+  173  cd /d/Zengjunjing
+  174  ls
+  175  rm 780.jfif 
+  176  history
+  177  history > 20213639.20230905
+  178  cd /d/Zengjunjing
+  179  ls
+  180  date
+  181  df
+  182  pwd
+  183  ls
+  184  cd /d
+  185  mkdir Zengjunjing
+  186  cp /d/资料/JavaWeb/* .
+  187  cd
+  188  cd /d/Zengjunjing
+  189  cp /d/资料/JavaWeb/* .
+  190  cp /d/ps图片/* .
+  191  cd ..
+  192  cd /d/ps图片/
+  193  ls
+  194  rm R-C.png
+  195  cd /d/Zengjunjing
+  196  rm R-C.png
+  197  cd /d
+  198  mkdir Zjj
+  199  rm
+  200  rm zjj
+  201  rm -rf zjj
+  202  rm ps图片
+  203  rm /d/ps图片/*
+  204  mv /d/ps图片/ dZengjunjing
+  205  mkdir ps
+  206  mkdir ps图片
+  207  mv /d/ps图片 /d/Zengjunjing
+  208  mv /d/ps图片/Zengjunjing /
+  209  $ mv /d/ps图片/Zengjunjing /d
+  210  mv /d/ps图片/Zengjunjing /d
+  211  cd/d/Zengjunjing
+  212  cd /d/Zengjunjing
+  213  mv /d/Zengjunjing/ps图片 /d
+  214  history
+  215  history > 20213639-20230905.txt
+  216  reset
+  217  cd /d
+  218  mkrid Zengjunjing
+  219  date
+  220  cal
+  221  ls /Zengjunjing
+  222  ls /资料
+  223  cd /d/Zengjunjing
+  224  ls
+  225  ls -l
+  226  ls -lt
+  227  ls -lt -reverse
+  228  ls -lt --reverse
+  229  ls -a --all
+  230  ls -A --almost
+  231  ls -A --almost-all
+  232  ls -d --directory
+  233  -F --classify
+  234  ls -F --classify
+  235  cd..
+  236  cd ..
+  237  ls -F --classify
+  238  ls -d --directory
+  239  ls -l
+  240  ls -r --reverse
+  241  ls -S
+  242  ls -t
+  243  ls -rw-r--r--
+  244  cd /d/Zengjunjing
+  245  ls -rw-r--r--
+  246  ls -rw-r--r-- 1 root root
+  247  ls -rw-r--r-- l root root
+  248  cd ..
+  249  cd /d/Zengjunjing/
+  250  file picture.jpg
+  251  ls
+  252  file ps图片库.jfif
+  253  file R-C
+  254  file R-C.jfif
+  255  cd ..
+  256  file Zengjunjing
+  257  /etc
+  258  ls /etc
+  259  ls /bin
+  260  ls /boot
+  261  ls /dev
+  262  ls /home
+  263  less /etc/passwd
+  264  less /etc
+  265  cd ..
+  266  cd ..
+  267  less /etc/passwd
+  268  history
+  269  history
+  270  whoami.exe 
+  271  ls /c
+  272  ls /d
+  273  ls /d -l
+  274  ld /d -lh
+  275  ls /d -lh
+  276  ls /d -l -h
+  277  cd Zengjunjing
+  278  cd /d/Zengjunjing
+  279  ls -l
+  280  mkdir pdf
+  281  ls -l
+  282  mv Learn\ CSS\ in\ One\ Day\ and\ Learn\ It\ Well.pdf pdf
+  283  ls pdf
+  284  mv Eloquent_JavaScript.pdf pdf
+  285  mv *.pdf pdf
+  286  ls pdf
+  287  mkdir face
+  288  mv *jpg face
+  289  mv *jfif face
+  290  ls
+  291  rm QQ图片20230628205434.psd
+  292  ls -R
+  293  ls -r
+  294  cat exp.html
+  295  mkdir exp.html
+  296  cat exp.html
+  297  cat
+  298  cd /d
+  299  ls
+  300  mv *mp3 Zengjunjing
+  301  cd /d/Zengjunjing
+  302  mv *mp3 mp3
+  303  mkdir mp3
+  304  mv *mp3 mp3
+  305  cat 新浪news.html 
+  306  ls -R
+  307  mkdir html
+  308  mv 新浪news.html html
+  309  mkdir txt
+  310  mv *txt txt
+  311  mv *.txt txt
+  312  ls
+  313  cd face
+  314  ls
+  315  rm 
+  316  Img912b902c2c6943139ef1622eedff6414.jpg
+  317  rm a13bbe10bc33ec38d07a6d5c295f0c14c37b3c15.jpg
+  318  rm a13bbe10bc33ec38d07a6d5c295f0c14c37b3c15.jpg
+  319  ls
+  320  rm Img912b902c2c6943139ef1622eedff6414.jpg
+  321  ls
+  322  mv ps图片库.jfif psphoto.jfif
+  323  mv Img912b902c2c6943139ef1622eedff6414.jpg 22.jpg
+  324  ls
+  325  mv E-1078413-C85404CD.jpg 22.jpg
+  326  cd ..
+  327  cd html
+  328  cat 新浪news.html 
+  329  cd ..
+  330  html
+  331  cd html
+  332  cat 新浪news.html 
+  333  cd ..
+  334  ls -R
+  335  cd html
+  336  mv 新浪news.html news.html
+  337  cd ..
+  338  ls -R
+  339  cd face
+  340  rm *.jfif
+  341  ls
+  342  cd ..
+  343  ls -R
+  344  face
+  345  cd face
+  346  mv 22.jpg zengjunjing.jpg
+  347  cd ..
+  348  ls -R
+  349  cat /html/news.html
+  350  ls -R
+  351  cd txt
+  352  less 20213639-202309.txt
+  353  less 20213639-202309
+  354  cd  /d/
+  355  cd /d/Zengjunjing/txt
+  356  less 20213639-20230912.txt
+  357  cat 20213639-20230912.txt
+  358  cd ..
+  359  history
+  360  history>11.txt
+  361  rm 11.txt 
+  362  cp -u *.html /d/test/javaweb
+  363  cd html
+  364  cp -u *.html /d/test/javaweb/
+  365  cd /d/Zengjunjing
+  366  ls
+  367  ls -R
+  368  cd txt
+  369  cat 20213639-20230905.txt 
+  370  cd ..
+  371  cd ..
+  372  cd /d/test/javaweb/
+  373  cat news.html 
+  374  rm news.html 
+  375  cp /d/Zengjunjing/news.txt .
+  376  cp /d/Zengjunjing/html/news.html  .
+  377  cd ..
+  378  cd ..
+  379  cd /d/Zengjunjing/
+  380  ls -l
+  381  cat txt/20213639-20230912.txt 
+  382  history
+  383  ls -lh
+  384  mv /mp3/*mp3 /d
+  385  mv /d/Zengjunjing/mp3/*mp3 /d
+  386  mv /d/*.mp3 /d/Zengjunjing/mp3/
+  387  $ mv /d/Zengjunjing/mp3/*mp3 /d
+  388  mv /d/*.mp3 /d/Zengjunjing/mp3/
+  389  mv /d/Zengjunjing/mp3/*mp3 /d
+  390  mv /d/*.mp3 /d/Zengjunjing/mp3
+  391  history
+  392  history>2
+  393  history>2.txt
+  394  cd /d/Zengjunjing
+  395  cp -v /d/Zengjunjing/txt/*.txt /d/test 
+  396  cp -i /d/Zengjunjing/txt/*.txt /d/test
+  397  ls -l
+  398  ls -l txt
+  399  tar -xf videoClips
+  400  cd /d/Zengjunjing
+  401  tar -xf videoClips
+  402  rm videoClips
+  403  ls
+  404  cd /d/Zengjunjing/videoMP4/
+  405  ls
+  406  history
+  407  cd ..
+  408  cd /d/Zengjunjing/videoMP4/
+  409  ls
+  410  history
+  411  cd..
+  412  cd ..
+  413  history>11.txt
+
+</pre>
+</p>
+ 
+ </body>
+</html>

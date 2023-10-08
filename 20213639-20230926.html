@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>命令行总结</title>
+    <style>
+        body{
+            font: 16px "simhei", Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+        body>div{
+            width: 1000px;
+            background-color: white;
+            margin: 0 auto;/*块级元素居中*/
+            overflow: hidden;/*解决上部元素粘连问题*/
+        }
+        #top{
+            background-color: white;
+            color: #606266;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        body>div>div{
+            margin: 20px;
+        }
+        #main>div{
+            background-color: #E8E8E8;
+            padding: 16px;
+            font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
+            margin:12px 40px;
+        }
+        .main_z_z{
+            background-color: #f5f5f5;
+        }
+		h2{
+		    color: #4f4f4f;
+            margin: 8px 0 16px 0;
+            font-weight: bold;
+            line-height: 26px;
+			font-size: 30px;
+		}
+        h3{
+            color: #4f4f4f;
+            margin: 8px 0 16px 0;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 26px;
+        }
+        h4{
+            padding: 5px;
+        }
+        li{
+            margin-bottom: 5px;
+        }
+        img{
+            width: 25px;
+            float: right;
+        }
+        #xuehao{
+            float:right;
+            margin-right: 10px;
+        }
+        .main_p{
+            padding: 10px;
+        }
+		a
+			{
+			font-size: 25px;
+			float: center;
+			color:purple;
+			padding:5px;
+			margin:10px;
+			}
+        p{
+           line-height: 26px;
+		}
+    </style>
+</head>
+<body>
+<div>
+    <div id="top">
+        <span>命令行总结</span>
+        <img src="https://img0.baidu.com/it/u=2407773217,1248198690&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="">
+        <span id="xuehao">20213639</span>
+        <hr>
+    </div>
+
+    <div id="main">
+      
+        <h3>一、ping命令 </h3>
+
+        <div class="main_z">
+		<pre>
+		  <p>
+		   <font size="4">
+ping命令：向网络主机发送ICMP ECHO_REQUEST
+
+ping命令向指定的主机发送名为ICMPECHOE_REQUEST的特殊网络包。
+大多数接收这个包的网络设备将回复它，允许验证网络连接。
+注意：可以配置大多数网络设备（包括Linux主机）来忽略这些数据包。
+这通常是出于安全原因，使主机部分于潜在攻击者。防火墙也通常被配置为阻止ICMP流量。
+
+举例：
+$ ping github.com
+命令启动后，ping继续以指定的间隔发送数据包（默认为1s），直至中断。
+
+在按ctrl-C中断之后（在这种情况下是在第六个包之后），ping打印性能统计信息。
+一个正常执行的网络将显示0%的数据包丢失。
+一个成功的“ping”将表明网络的元素（其接口卡、电缆、路由和网关）通常处于良好的工作状态。
+		         
+		  </p>
+		
+		</pre>
+             
+        </div>
+
+	   <div id="main">
+        <h3>二、tracert命令</h3>
+		<div class="main_z">
+
+       <pre>
+			 <p>
+			  <font size="4" >
+tracert命令：将路由数据包跟踪打印到网络主机
+
+跟踪路径程序（有些系统使用类似的跟踪路径程序）列出了从本地系统到指定主机所需的所有“跳”网络流量。
+
+例如，要查看到达mit.edu的路线，可输入命令
+$tracert mit.edu
+			 </font>
+			</p>
+	   </pre>
+	   </div>
+	   </div>
+
+      <div id="main">
+        <h3>三、cut命令</h3>
+		<div class="main_z">
+       <pre>
+	   <p>
+		   <font size="4" >
+属性：
+-b：仅显示行中指定直接范围的内容；
+
+-c：仅显示行中指定范围的字符；
+
+-d：指定字段的分隔符，默认的字段分隔符为“TAB”；
+
+-f：显示指定字段的内容；
+
+-n：与“-b”选项连用，不分割多字节字符；
+
+--complement：补足被选择的字节、字符或字段；
+
+--out-delimiter=<字段分隔符>：指定输出内容是的字段分割符；
+
+--help：显示指令的帮助信息；
+
+--version：显示指令的版本信息。
+
+命令：
+$ cut --delimiter=/ -f1 cet6.txt
+将cet6.txt文件中第一个字段的资料导出
+
+$ cut --delimiter=/ -f1 cet6.txt |grep 'tor$' |wc
+将cet6.txt文件中第一个字段的资料导出，统计满足以‘tor’结尾的单词个数
+
+$ cut --delimiter=/ -f1 cet6.txt |grep '^tor' |wc
+将cet6.txt文件中第一个字段的资料导出，统计满足以‘tor’开头的单词个数
+
+$ cut --delimiter=/ -f1 cet6.txt |grep 'tor$' |less
+将cet6.txt文件中第一个字段的资料导出，展示所有以‘tor’的单词
+       </p>
+	   </pre>
+        </div>
+
+	
+</div>
+		  
+</body>
+</html>
