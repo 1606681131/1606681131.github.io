@@ -1,0 +1,487 @@
+    1  git init
+    2  cd /
+    3  ls
+    4  git tag
+    5  mkdir Zengjunjing
+    6  cd
+    7  cat filename > /dev/clipboard
+    8  cat filename > /d/ps图片
+    9  cat /d/ps图片 > Zengjunjing
+   10  mkdir /d/Zengjunjing
+   11  history
+   12  mkdir face
+   13  history >work.txt
+   14  cd ..
+   15  cd:\Zengjunjing
+   16  cd:/Zengjunjing
+   17  cp [200~"C:\Users\曾俊菁\OneDrive\桌面\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf" .
+   18  mkdir pdf
+   19  ls
+   20  ls -s
+   21  ls -a -s
+   22  cp "D:\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf" .
+   23  cp /d/资料/JavaWeb/* pdf
+   24  cd ..
+   25  cp /d/资料/JavaWeb/* pdf
+   26  ls pdf
+   27  cd ..
+   28  cp/d/资料/JavaWeb/* pdf
+   29  cd d
+   30  ls
+   31  cd d
+   32  cd/
+   33  cd..
+   34  cd
+   35  cd d
+   36  d
+   37  cd/
+   38  cd d
+   39  mkdir Zengjunjing
+   40  cd /d
+   41  cd /d/Zengjunjing
+   42  cd 资料
+   43  cd/d
+   44  cd..
+   45  cd ..
+   46  cd 资料
+   47  JavaWeb
+   48  cd/d/Zengjunjing
+   49  cd ..
+   50  cd/d/Zengjunjing
+   51  cd /d/Zengjunjing
+   52  cp
+   53  cp /d/资料/JavaWeb/
+   54  cd ..
+   55  cd /d/资料/Java web、
+   56  cd /d/资料/JavaWeb/
+   57  cat
+   58  cd ..
+   59  cd ..
+   60  cd /d
+   61  cd /d/Zengjunjing
+   62  cp /d/资料/JavaWeb/work.txt
+   63  cp /d/资料/JavaWeb/"C:\Users\曾俊菁\OneDrive\桌面\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf"
+   64  cp /d/资料/JavaWeb/The\ Linux\ Command\ Line\ A\ Complete\ Introduction.pdf 
+   65  cp /d/资料/JavaWeb/The Linux Command Line A Complete Introduction.pdf 
+   66  ls
+   67  -a -s
+   68  cd ..
+   69  cd /d/资料/JavaWeb/
+   70  ls
+   71  rm R-C.png 
+   72  cp /d/资料/Zengjunjing/Work.txt
+   73  cp
+   74  cp d
+   75  cd d
+   76  cd /d
+   77  cd /d/Zengjunjing
+   78  ls
+   79  history
+   80  cp
+   81  cp /d/资料/JavaWeb/The Linux Command Line A Complete Introduction.pdf
+   82  cd
+   83  cd /d
+   84  mkdir Zengjunjing
+   85  cd 资料 
+   86  cd JavaWeb/
+   87  ls -R
+   88  ls
+   89  cd /d/Zengjunjing
+   90  cp
+   91  cp /d/资料/JavaWeb/* .
+   92  cp /d/资料/JavaWeb/R-C.png 
+   93  cp /d/资料/JavaWeb/R-C.png .
+   94  rm Eloquent_JavaScript.pdf
+   95  cp /d/资料/JavaWeb/Eloquent_JavaScript.pdf
+   96  cp /d/资料/JavaWeb/Eloquent_JavaScript.pdf .
+   97  history
+   98  history
+   99  history > Work.txt
+  100  cd /d
+  101  cd /d/Zengjunjing
+  102  ls
+  103  cp
+  104  cp /d/资料/JavaWeb/[200~"D:\资料\JavaWeb\The Linux Command Line A Complete Introduction.pdf
+  105  q
+  106  cd /d
+  107  cd /d/资料/JavaWeb
+  108  ls
+  109  cd ..
+  110  cd ..
+  111  cd /d/Zengjunjing
+  112  ls
+  113  cp /d/资料/JavaWeb/ Eloquent_JavaScript.pdf
+  114  cp /d/资料/JavaWeb/'Learn CSS in One Day and Learn It Well.pdf'
+  115  cd ..
+  116  cd /d/资料/JavaWeb/
+  117  cp /d/Zengjunjing/Work.txt 
+  118  cp /d/Zengjunjing/Work.txt .
+  119  cp /d/Zengjunjing/R-C.png 
+  120  cp /d/Zengjunjing/R-C.png .
+  121  rm R-C.png 
+  122  rm Work.txt 
+  123  history
+  124  cd /d
+  125  cd /d/Zengjunjing
+  126  rm -rf Zengjunjing
+  127  cd /d
+  128  rm Zengjunjing
+  129  rm -rf Zengjunjing
+  130  mkdir Zengjunjing
+  131  cd /d/Zengjunjing
+  132  cp /d/资料/JavaWeb/* .
+  133  ls
+  134  history
+  135  history > Code.txt
+  136  cp d/ps图片/* .
+  137  cp /d/ps图片/R-C.png
+  138  cd..
+  139  cd ..
+  140  cd /d/ps图片/
+  141  ls
+  142  cd ..
+  143  cd /d/Zengjunjing
+  144  cp /d/ps图片/R-C.png .
+  145  cp /d/ps图片/* .
+  146  cp /d/ps图片/* .
+  147  clear
+  148  cd ..
+  149  cd/d/ps图片
+  150  cd/d/ps图片/
+  151  cd /d/Zengjunjing
+  152  date
+  153  cal
+  154  cd ..
+  155  cd ..
+  156  cal
+  157  cd ..
+  158  clear
+  159  date
+  160  cal
+  161  cd..
+  162  cd ..
+  163  cd ..
+  164  cal
+  165  df
+  166  free
+  167  exit
+  168  pwd/home/me
+  169  pwd
+  170  la
+  171  ls
+  172  cd bin
+  173  cd /d/Zengjunjing
+  174  ls
+  175  rm 780.jfif 
+  176  history
+  177  history > 20213639.20230905
+  178  cd /d/Zengjunjing
+  179  ls
+  180  date
+  181  df
+  182  pwd
+  183  ls
+  184  cd /d
+  185  mkdir Zengjunjing
+  186  cp /d/资料/JavaWeb/* .
+  187  cd
+  188  cd /d/Zengjunjing
+  189  cp /d/资料/JavaWeb/* .
+  190  cp /d/ps图片/* .
+  191  cd ..
+  192  cd /d/ps图片/
+  193  ls
+  194  rm R-C.png
+  195  cd /d/Zengjunjing
+  196  rm R-C.png
+  197  cd /d
+  198  mkdir Zjj
+  199  rm
+  200  rm zjj
+  201  rm -rf zjj
+  202  rm ps图片
+  203  rm /d/ps图片/*
+  204  mv /d/ps图片/ dZengjunjing
+  205  mkdir ps
+  206  mkdir ps图片
+  207  mv /d/ps图片 /d/Zengjunjing
+  208  mv /d/ps图片/Zengjunjing /
+  209  $ mv /d/ps图片/Zengjunjing /d
+  210  mv /d/ps图片/Zengjunjing /d
+  211  cd/d/Zengjunjing
+  212  cd /d/Zengjunjing
+  213  mv /d/Zengjunjing/ps图片 /d
+  214  history
+  215  history > 20213639-20230905.txt
+  216  reset
+  217  cd /d
+  218  mkrid Zengjunjing
+  219  date
+  220  cal
+  221  ls /Zengjunjing
+  222  ls /资料
+  223  cd /d/Zengjunjing
+  224  ls
+  225  ls -l
+  226  ls -lt
+  227  ls -lt -reverse
+  228  ls -lt --reverse
+  229  ls -a --all
+  230  ls -A --almost
+  231  ls -A --almost-all
+  232  ls -d --directory
+  233  -F --classify
+  234  ls -F --classify
+  235  cd..
+  236  cd ..
+  237  ls -F --classify
+  238  ls -d --directory
+  239  ls -l
+  240  ls -r --reverse
+  241  ls -S
+  242  ls -t
+  243  ls -rw-r--r--
+  244  cd /d/Zengjunjing
+  245  ls -rw-r--r--
+  246  ls -rw-r--r-- 1 root root
+  247  ls -rw-r--r-- l root root
+  248  cd ..
+  249  cd /d/Zengjunjing/
+  250  file picture.jpg
+  251  ls
+  252  file ps图片库.jfif
+  253  file R-C
+  254  file R-C.jfif
+  255  cd ..
+  256  file Zengjunjing
+  257  /etc
+  258  ls /etc
+  259  ls /bin
+  260  ls /boot
+  261  ls /dev
+  262  ls /home
+  263  less /etc/passwd
+  264  less /etc
+  265  cd ..
+  266  cd ..
+  267  less /etc/passwd
+  268  history
+  269  history
+  270  whoami.exe 
+  271  ls /c
+  272  ls /d
+  273  ls /d -l
+  274  ld /d -lh
+  275  ls /d -lh
+  276  ls /d -l -h
+  277  cd Zengjunjing
+  278  cd /d/Zengjunjing
+  279  ls -l
+  280  mkdir pdf
+  281  ls -l
+  282  mv Learn\ CSS\ in\ One\ Day\ and\ Learn\ It\ Well.pdf pdf
+  283  ls pdf
+  284  mv Eloquent_JavaScript.pdf pdf
+  285  mv *.pdf pdf
+  286  ls pdf
+  287  mkdir face
+  288  mv *jpg face
+  289  mv *jfif face
+  290  ls
+  291  rm QQ图片20230628205434.psd
+  292  ls -R
+  293  ls -r
+  294  cat exp.html
+  295  mkdir exp.html
+  296  cat exp.html
+  297  cat
+  298  cd /d
+  299  ls
+  300  mv *mp3 Zengjunjing
+  301  cd /d/Zengjunjing
+  302  mv *mp3 mp3
+  303  mkdir mp3
+  304  mv *mp3 mp3
+  305  cat 新浪news.html 
+  306  ls -R
+  307  mkdir html
+  308  mv 新浪news.html html
+  309  mkdir txt
+  310  mv *txt txt
+  311  mv *.txt txt
+  312  ls
+  313  cd face
+  314  ls
+  315  rm 
+  316  Img912b902c2c6943139ef1622eedff6414.jpg
+  317  rm a13bbe10bc33ec38d07a6d5c295f0c14c37b3c15.jpg
+  318  rm a13bbe10bc33ec38d07a6d5c295f0c14c37b3c15.jpg
+  319  ls
+  320  rm Img912b902c2c6943139ef1622eedff6414.jpg
+  321  ls
+  322  mv ps图片库.jfif psphoto.jfif
+  323  mv Img912b902c2c6943139ef1622eedff6414.jpg 22.jpg
+  324  ls
+  325  mv E-1078413-C85404CD.jpg 22.jpg
+  326  cd ..
+  327  cd html
+  328  cat 新浪news.html 
+  329  cd ..
+  330  html
+  331  cd html
+  332  cat 新浪news.html 
+  333  cd ..
+  334  ls -R
+  335  cd html
+  336  mv 新浪news.html news.html
+  337  cd ..
+  338  ls -R
+  339  cd face
+  340  rm *.jfif
+  341  ls
+  342  cd ..
+  343  ls -R
+  344  face
+  345  cd face
+  346  mv 22.jpg zengjunjing.jpg
+  347  cd ..
+  348  ls -R
+  349  cat /html/news.html
+  350  ls -R
+  351  cd txt
+  352  less 20213639-202309.txt
+  353  less 20213639-202309
+  354  cd  /d/
+  355  cd /d/Zengjunjing/txt
+  356  less 20213639-20230912.txt
+  357  cat 20213639-20230912.txt
+  358  cd ..
+  359  history
+  360  history>11.txt
+  361  rm 11.txt 
+  362  cp -u *.html /d/test/javaweb
+  363  cd html
+  364  cp -u *.html /d/test/javaweb/
+  365  cd /d/Zengjunjing
+  366  ls
+  367  ls -R
+  368  cd txt
+  369  cat 20213639-20230905.txt 
+  370  cd ..
+  371  cd ..
+  372  cd /d/test/javaweb/
+  373  cat news.html 
+  374  rm news.html 
+  375  cp /d/Zengjunjing/news.txt .
+  376  cp /d/Zengjunjing/html/news.html  .
+  377  cd ..
+  378  cd ..
+  379  cd /d/Zengjunjing/
+  380  ls -l
+  381  cat txt/20213639-20230912.txt 
+  382  history
+  383  ls -lh
+  384  mv /mp3/*mp3 /d
+  385  mv /d/Zengjunjing/mp3/*mp3 /d
+  386  mv /d/*.mp3 /d/Zengjunjing/mp3/
+  387  $ mv /d/Zengjunjing/mp3/*mp3 /d
+  388  mv /d/*.mp3 /d/Zengjunjing/mp3/
+  389  mv /d/Zengjunjing/mp3/*mp3 /d
+  390  mv /d/*.mp3 /d/Zengjunjing/mp3
+  391  history
+  392  history>2
+  393  history>2.txt
+  394  cd /d/Zengjunjing
+  395  cp -v /d/Zengjunjing/txt/*.txt /d/test 
+  396  cp -i /d/Zengjunjing/txt/*.txt /d/test
+  397  ls -l
+  398  ls -l txt
+  399  tar -xf videoClips
+  400  cd /d/Zengjunjing
+  401  tar -xf videoClips
+  402  rm videoClips
+  403  ls
+  404  cd /d/Zengjunjing/videoMP4/
+  405  ls
+  406  history
+  407  cd ..
+  408  cd /d/Zengjunjing/videoMP4/
+  409  ls
+  410  history
+  411  cd..
+  412  cd ..
+  413  history>11.txt
+  414  clear
+  415  hitory
+  416  history
+  417  ls videoMP4/
+  418  ls videoMP4
+  419  ls
+  420  rm /d/Zengjunjing/videoMP4/ /d
+  421  clear
+  422  mv /d/Zengjunjing/videoMP4/ /d
+  423  mv /d/videoMP4/ /d/Zengjunjing
+  424  ls
+  425  ls mp3
+  426  ls
+  427  ls videoMP4/
+  428  cd /d/zengjunjing
+  429  ls
+  430  cat cxhz.hep.txt 
+  431  ls
+  432  ls -R
+  433  ls
+  434  cd /d/Zengjunjing/itPro.txt 
+  435  ls itPro.txt 
+  436  ls -R itPro.txt 
+  437  cat itPro.txt 
+  438  cd/ /d/Zengjunjing/
+  439  cd /d/Zengjunjing/
+  440  ls
+  441  ls -R
+  442  ls -l
+  443  ll -h
+  444  ls videoMP4/
+  445  cat videoMP4/
+  446  cat cxhz.hep.txt 
+  447  cat itPro.txt 
+  448  less itPro.txt 
+  449  wc itPro.txt 
+  450  ls
+  451  wc cxhz.hep.txt 
+  452  grep cxhz.hep.txt 计算机科学与技术
+  453  grep cxhz.hep.txt 
+  454  history
+  455  cd /d/Zengjunjing/
+  456  history
+  457  grep cxhz.hep.txt 智能|wc
+  458  cd /d/Zengjunjing/
+  459  history
+  460  grep cxhz.hep.txt 科技|wc
+  461  grep cxhz.hep.txt 科技
+  462  grep cxhz.hep.txt 
+  463  cd /d/Zengjunjing/
+  464  grep 网络 cxhz.hep.txt |wc
+  465  grep 教育 cxhz.hep.txt |wc
+  466  grep 软件 cxhz.hep.txt |wc
+  467  grep 安全 cxhz.hep.txt |wc
+  468  grep 智能 cxhz.hep.txt |wc
+  469  grep 教育 cxhz.hep.txt 
+  470  curl http://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt
+  471  cd /d/Zengjunjing/
+  472  http://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt>cet6.txt
+  473  curl http://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt>cet.txt
+  474  ls
+  475  mv *.txt txt
+  476  curl https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt
+  477  cd /d/Zengjunjing/
+  478  cp https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt /d/Zengjunjing/
+  479  cp https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt /d/Zengjunjing/txt
+  480  cp https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt /d/Zengjunjing/txt .
+  481  cp https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt .
+  482  cp https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt .
+  483  curl https://lijianhong19720904.github.io/WebAdv/kc00/cet6.txt >cet6.txt
+  484  history
+  485  history > d/Zengjunjing/
+  486  history > d/Zengjunjing/txt/
+  487  history > d/Zengjunjing/txt/history.txt
