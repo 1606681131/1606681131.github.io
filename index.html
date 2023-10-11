@@ -1,49 +1,211 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8"> 
-    <title>个人首页</title>  
-    <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-        }  
-        h1 {  
-            color: #333;  
-            text-align: center;  
-        }  
-        ul {  
-            list-style-type: none;  
-            margin: 0;  
-            padding: 0;  
-            width: 200px;  
-            margin: 0 auto;  
-        }  
-        li {  
-            background-color: #f2f2f2;  
-            padding: 10px;  
-            margin-bottom: 5px;  
-            text-align: center;  
-        }  
-        a {  
-            text-decoration: none;  
-            color: #333;  
-            display: block;  
-        }  
-        a:hover {  
-            background-color: #ddd;  
-        }  
-    </style>  
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>JavaWeb每周作业总结</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      background-color: #f5f5f5;  
+      color: #333;  
+    }  
+  
+    h1 {  
+      text-align: center;  
+      color: #666;  
+      font-size: 40px;  
+      margin-top: 30px;  
+    }  
+
+	a
+	{
+		font-size: 25px;
+		color:purple;		
+	}
+    p{
+	    
+		line-height: 30px;
+		}
+
+    .container {  
+      max-width: 800px;  
+      margin: 0 auto;  
+      padding: 20px;  
+      background-color: #fff;  
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    }  
+  
+    .week {  
+	background-color: #f5f5f5;
+      margin-bottom: 20px;  
+    }  
+  
+    .week h2 {  
+      font-size: 24px;  
+      color: #444;  
+      margin-bottom: 10px;  
+    }  
+  
+    
+  </style>  
 </head>  
 <body>  
-    <h1>个人首页</h1>  
-    <ul>  
-	<font size="5" >
-        <li><a href="20213639-20230912.html">作业1</a></li>  
-        <li><a href="20213639-20230919.html">作业2</a></li>  
-        <li><a href="20213639-20230926.html">作业3</a></li>   
-		<li><a href="history.txt">作业4</a></li>   
-    </font>
-    </ul>  
+  <div class="container">  
+
+    <h1>JavaWeb每周作业总结</h1>  
+     <a href="history.txt">第一周作业</a>
+
+    <div class="week">  
+      
+     <h2>
+	  课后任务：<br>
+	 </h2>
+	 
+	  <p>
+	  Gitbash的历史命令记录<br>
+	  相关命令：$ history>history.txt
+	  </p>
+	   <h2>
+	    所学知识：<br>
+	   </h2>
+	   <p>
+	    1.命令mkrid：通过 mkdir 命令可以实现在指定位置创建以 DirName(指定的文件名)命名的文件夹或目录。要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)。<br>
+		2.rm ( remove ) 删除文件<br>
+		3.-rm -rf 文件夹（循环递进删除文件夹,不需要二次确认）<br>
+		4.mv ( move ) 移动文件或重命名<br>
+		5.cp ( copy ) 复制文件，要注意后面有空格加点<br>
+		6.pwd ( print working directory ) 查看当前所在路径--绝对路径<br>
+		7.cd ( change directory ) 切换目标<br>
+		8.cd .. 返回到上一个目录<br>
+		9.ls ( list ) 查看当前目录下的内容<br>
+	  </p>
+    </div>  
+
+	<a href="20213639-20230912">第二周作业</a>
+
+    <div class="week">  
+     
+	 <h2>
+	  课后任务：<br>
+	 </h2>
+	 <p>
+	    1、配合听老师的mp3音频文件，阅读LiuxCMD书的序言和第一章。<br>
+		2、下载文件包到个人文件夹。<br>
+		3、用tar -xf videoClips命令解包。<br>
+		4、删除下载的的包文件，列出解包的文件。<br>
+		5、以HTML文件格式，给出实验报告(标题，简介， 命令，总结)。<br>
+		6、下载管理好上面的MP3文件，学有余力的同学，配合Linux CMD的第2章，阅读和收听这个文件。<br>
+	 </p>
+
+	 <h2>
+	  所学知识：<br>
+	 </h2>
+	 
+	 <p>
+		ls -R命令：能够列出当前工作目录下所有文件及目录并以文件的大小进行排序<br>
+		cat [文件名]：一次显示整个文件<br>
+		ls -lh：人性化显示是目录下个个文件的详细信息 , h相当于humanize<br>
+	 </p>
+    </div>  
+
+	<a href="20213639-20230919">第三周作业</a>
+
+	 <div class="week">  
+     <h2>
+	  课后任务：<br>
+	 </h2>
+	
+	 <p>
+	    1、标题: XXX (例如:教育产学合作)。<br>
+		2、企业分类(4个类) :网络，教育，软件，安全(可以利用ol li将其进行列出，注明每个类中所含企业的个数)。<br>
+		3、在相应的类中，有对应类的公司的信息(如公司名等)(可以在Gitbash中导出)。<br>
+		4、感兴趣的公司的链接，点击可以进行相关页面的浏览，可以在基于自己了解的情况下进行该企业的介绍。<br>
+	 </p>
+	  <h2>
+	  文献所学知识：<br>
+	  </h2>
+	  <p>
+	  读了《The Linux Command Line A Complete Introduction》的前两章，我理解和掌握了以下知识：<br>
+		1.命令历史记录：如果按下键盘的向上箭头，就可以看到上一条执行的命令重复出现。按下向下箭头，前面的命令就会消失。左右箭头可以将光标定位在命令行的任意位置。<br>
+		2.快速复制粘贴：如果通过按住鼠标左键并将鼠标拖动在其上（或双击一个单词）来突出显示某些文本，它将复制到x维护的缓冲区中。按下鼠标中键将导致文本粘贴在光标位置。不要使用ctrl-C和ctrl-V在终端窗口内执行复制和粘贴，没有用。
+		3.命令date：能够显示当前的时间和日期。<br>
+		4.命令cal：默认情况下，它会显示当前月份的日历。<br>
+		5.命令df：查看磁盘驱动器上的当前可用空间量。<br>
+		6.命令free：显示空闲内存的数量。<br>
+		7.命令pwd：显示当前的工作目录。<br>
+		8.命令ls：列出当前工作目录中的文件和目录。<br>
+		9.命令cd：更改工作目录。<br>
+		10.虽然Linux支持可能包含嵌入式空格和标点字符的长文件名，但需将创建的文件名称中的标点字符限制为句点、破折号和下划线。最重要的是，不要在文件名中嵌入空格。如果要在文件名中表示单词之间的空格，请使用下划线字符。<br>
+		</p>	 
+			</div>  
+
+	<a href="20213639-20230926">第四周作业</a>
+
+	 <div class="week">  
+     
+	 <h2>
+	  课后任务：<br>
+	 </h2>
+	 <p>
+	    对ping命令、tracert命令以及cut命令进行总结，列出命令相关属性及用法。
+	 </p>
+	  <h2>
+	  文献所学知识：<br>
+	 </h2>
+	 <p>
+	 读了《The Linux Command Line A Complete Introduction》的第三章，我理解和掌握了以下知识：<br>
+		1.ls 查看文件内容，确定各种重要的文件和目录属性<br>
+		2.file 确定文件类型<br>
+		3.less 查看文件内容，退出查看<br>
+		4.ls -l：更改输出格式为长格式来显示更多的细节<br>
+		5.ls -lt:ls命令有两个选项，一个是生成长格式输出的l选项，另一个是根据文件的修改时间对结果进行排序的t选项<br>
+		6.ls -lt --reverse:添加长选项，反向来反转排序的顺序<br><br>
+
+		ls命令有大量可能的选项，其中最常见的选项如下：<br>
+		-a --all:列出所有的文件，即使是那些名称以句号开头的文件，它们通常不被列出（即隐藏）<br>
+		-A --almost-all：就像-a选项一样，除了它没有列出当前目录和..父目录。<br>
+		-d --directory：可以查看有关目录的详细信息，而不是其内容<br>
+		-F --classify：此选项将在每个列出的名称的末尾添加一个指示符字符<br>
+		-h --human-readable：在长格式列表中，以人可读格式显示文件大小，而不是以字节格式显示文件大小。<br>
+		-l：以长格式显示结果。<br>
+		-r --reverse：以相反的顺序显示结果。通常，ls以字母顺序升序显示其结果。<br>
+		-S：按文件大小对结果进行排序。<br>
+		-t：按修改时间排序<br><br>
+
+		ls长列表字段：<br>
+		-rw-r--r--：访问该文件的权限。第一个字符表示文件的类型。在不同的类型中，前导破折号表示常规文件，而d表示目录。后面的三个字符是文件所有者的访问权限，后面的三个字符是针对文件组的成员的，最后三个字符是针对其他所有人的。<br>
+	 </p>
+    </div>  
+
+	<a href="20213639-20231010">第五周作业</a>
+
+	 <div class="week">  
+     
+	 <h2>
+	  课后任务：<br>
+	 </h2>
+	 <p>
+	    实现个人播放器，能够拥有暂停，播放，切换上下视频等功能。
+	 </p>
+	  <h2>
+	  所学知识：<br>
+	 </h2>
+	 <p>
+
+		1.HTML：了解基本的HTML结构，如何创建视频元素、按钮等。<br>
+		2.CSS：学习如何使用CSS来控制元素的样式，如布局、颜色、大小等。这对于美化播放器界面非常重要。<br>
+		3.JavaScript：掌握JavaScript语言，以便为播放器添加交互功能。例如，监听按钮点击事件、控制视频的播放和暂停等。<br>
+		4.事件处理：学会使用JavaScript来处理用户事件，如点击、触摸等。这对于实现用户交互功能至关重要。<br>
+		5.视频/音频 API：了解HTML5提供的视频/音频API，如video.play(), video.pause(), video.currentTime等，以便控制视频的播放。<br>
+		6.状态管理：学习如何管理和更新播放器的状态，如当前播放的视频、播放/暂停状态等。<br>
+
+
+	 </p>
+    </div>  
+
+
+
+    <!-- 添加更多周的作业 -->  
+  </div>  
 </body>  
 </html>
-
