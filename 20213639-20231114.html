@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Web第九组的自学系统原型</title>
+    <style type="text/css">
+        
+    body{
+	margin:0px;
+	}
+
+    input{
+	font-size:1.5em;
+	}
+	button
+	{
+    margin-right:20px;
+	cursor:pointer;
+	transition-duration: 0.4s;     /* 检索或设置对象过渡的持续时间 */
+	background-color:#d9d9d9;
+	margin-top:10px;
+	width: 90px;
+	height: 55px;
+	font-size: 20px;
+	border-radius: 10px;           /*允许为元素添加圆角边框*/
+	}
+
+	button:active{
+	  background-color: #cfcfcf;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);  /*通过给定Y方向的数目指定一个translation*/
+   }
+
+	button:hover
+	{
+		background-color: #cfcfcf;
+		color: white;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	h1{
+	text-align:center;
+	}
+
+    button#switch{
+	border-radius:20%;
+	background:
+    
+	}
+    #myVideo{
+	width:100%;
+	height:auto;
+	}
+
+    #logo{
+	background-color:red;
+	right:0;
+	top:10;
+	color:white;
+	font-size:3em;
+	padding:10px 20px;
+	position:absolute;
+	} 
+	#showTime{
+	background-color:blue;
+	left:0;
+	top:10;
+	color:white;
+	font-size:3em;
+	padding:10px 20px;
+	position:absolute;
+	}
+ </style>
+
+    <script src="mp3.js">
+    </script>
+	 <script src="mediaData.js">
+	 </script>
+
+</head>
+
+<body>
+    <div id="showTime">
+    </div>
+
+    <div id="logo">
+    </div>
+
+	<div id="stage">
+		<video id="myVideo"> </video>
+		<audio id="myAudio" src="D:\media\mp3Files\linuxCMD-6.mp3"></audio>
+	</div>
+    
+    <div id='duration'>
+	</div>
+
+	<div id="audioduration" style="visibility:hidden">
+	</div>
+
+    <div id="UI">
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+		<button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="switch">音频</button>
+    </div>
+
+    <script>
+		var Model = {
+			i : 0,
+			isVideo : true,
+			UI : {
+				stageDom : document.getElementById("stage"),
+				myVideoDom : document.getElementById("myVideo"),
+				showTimeDom : document.getElementById("showTime"),
+			    myAudioDom : document.getElementById("myAudio"),
+				logoDom : document.getElementById("logo"),
+
+				//下面是按钮
+				playDom : document.getElementById("play"),
+			    stopDom : document.getElementById("stop"),  
+				prevDom : document.getElementById("prev"),
+				nextDom : document.getElementById("next"),
+				switchDom : document.getElementById("switch"),
+				},
+
+         
+
+			play : function(){
+				Model.isVideo?Model.UI.myVideoDom.play():Model.UI.myAudioDom.play();
+				Model.mediaInfo();
+				Model.timeInfo();
+				Model.startTimeUpdate();
+			},
+			pause : function(){
+				Model.isVideo?Model.UI.myVideoDom.pause():Model.UI.myAudioDom.pause();
+			},
+			prev : function(){
+				let myVideo = Model.UI.myVideoDom;
+				if (Model.i==0)
+				{
+					Model.i = mediaData.videoFileNames.length-1;
+				}else{
+					Model.i--;
+				}
+				Model.loadMedia();
+				Model.play();
+			},
+			next : function(){
+				let myVideo = Model.UI.myVideoDom;
+				if (Model.i==mediaData.videoFileNames.length-1)
+				{
+					Model.i=0;
+				}else{
+					Model.i++;
+				}
+				Model.loadMedia();
+				Model.play();
+
+			},
+			
+			mediaInfo : function(){
+			   let mediaNum = Model.isVideo ? mediaData.videoFileNames.length:mediaData.podFileStruct.length ;
+			   Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
+			},
+			timeInfo : function(){
+			   let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+			   let mediaTime = parseInt(mediaElem.duration);  
+			   let currentTime = parseInt(mediaElem.currentTime);  
+			   Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
+			},
+			startTimeUpdate : function() {  
+               let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+               mediaElem.addEventListener('timeupdate', function() {  
+               Model.timeInfo();  
+             });  
+            },
+			loadMedia : function(){
+				let i = Model.i;
+				if(Model.isVideo){ 
+					Model.UI.myVideoDom.src = mediaData.videoPath + mediaData.videoFileNames[i];
+				}else{
+					Model.UI.myAudioDom.src = mediaData.podPath + mediaData.podFileStruct[0].FileName;
+				}
+			},
+			init : function(){  
+				//视频UI全屏设置
+                Model.UI.browserWidth = document.body.clientWidth;
+                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
+                //预读媒体文件
+				Model.loadMedia(0);
+				//初始化UI的控件的onclick属性
+				Model.UI.playDom.onclick = function() {
+					Model.play();
+				};
+				Model.UI.stopDom.onclick = function() {
+					Model.pause();
+				};
+				Model.UI.prevDom.onclick = function() {
+					Model.prev();
+				};
+				Model.UI.nextDom.onclick = function() {
+					Model.next();
+				};
+				Model.UI.switchDom.onclick = function(){
+				 if (Model.isVideo) {
+					this.textContent = "视频";
+					Model.pause();                                         //暂停正在播放的音频
+					Model.UI.myVideoDom.style.visibility = "hidden";       //隐藏视频
+					Model.UI.durationDom.style.visibility = "hidden";      //隐藏九个视频按钮
+					Model.UI.prevDom.style.visibility = "hidden";          //隐藏prev按钮
+					Model.UI.nextDom.style.visibility = "hidden";          //隐藏next按钮
+					Model.UI.showTimeDom.style.visibility = "hidden";      //隐藏时间框
+					Model.UI.logoDom.style.visibility = "hidden";          //隐藏索引框
+					Model.UI.audiodurationDom.style.visibility = "";       //显示五个音频按钮
+					
+				} else {
+					this.textContent = "音频";
+					Model.pause();                                         //暂停正在播放的视频
+                    Model.UI.audiodurationDom.style.visibility = "hidden"; //隐藏五个音频按钮
+					Model.UI.myVideoDom.style.visibility = "";             //显示视频
+					Model.UI.durationDom.style.visibility = "";            //显示九个视频按钮
+					Model.UI.prevDom.style.visibility = "";                //显示prev按钮
+					Model.UI.nextDom.style.visibility = "";                //显示next按钮
+					Model.UI.showTimeDom.style.visibility = "";            //显示时间框
+					Model.UI.logoDom.style.visibility = "";                //显示索引框
+				}
+				Model.isVideo = !Model.isVideo;
+				};
+			
+			},//init结束
+		};//Model结束
+		Model.init();
+
+		//动态生成9个视频按钮
+        Model.UI.durationDom = document.getElementById('duration');
+        Model.UI.durationDom.items = [];
+        for (let i = 0; i < 9; i++) {
+            let tempDom = document.createElement('input');
+            tempDom.type = 'button';
+            tempDom.value += 'NO.' + (i + 1);
+            Model.UI.durationDom.items[i] = tempDom;
+            Model.UI.durationDom.appendChild(tempDom);
+        }
+        for (let i = 0; i < 9; i++) {
+            Model.UI.durationDom.items[i].onclick = function() {
+            Model.UI.myVideoDom.currentTime = (myVideo.duration / 9) * i;
+            };
+        }
+
+
+
+		// 动态生成5个音频按钮  
+		Model.UI.audiodurationDom = document.getElementById('audioduration');  
+		Model.UI.audiodurationDom.items = [];  		  
+		for (let i = 0; i < 5; i++) {  
+			let AudiotempDom = document.createElement('input');  
+			AudiotempDom.type = 'button';  
+			AudiotempDom.value = mediaData.podFileStruct[0].title[i]; 
+			Model.UI.audiodurationDom.items[i] = AudiotempDom;  
+			Model.UI.audiodurationDom.appendChild(AudiotempDom);  
+		}    
+		for (let i = 0; i < 5; i++) {  
+			Model.UI.audiodurationDom.items[i].onclick = function() {  
+				Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[0].time[i][0];  
+			};  
+		}
+       
+    </script>
+</body>
+
+</html>
