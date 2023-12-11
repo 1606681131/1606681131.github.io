@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web第九组的自学系统原型</title>
+    <style type="text/css">
+        
+    body{
+	   margin:0px;
+	}
+    input{
+	   font-size:1.5em;
+	}
+	.video-button{
+	   margin-right:10px;
+	   margin-top:10px;
+	}
+	.audio-button {  
+		margin-right: 20px;
+		margin-top:20px;
+    }
+
+	button
+	{
+		margin-right:20px;
+		cursor:pointer;
+		transition-duration: 0.4s;     
+		background-color:#d9d9d9;
+		margin-top:10px;
+		width: 90px;
+		height: 55px;
+		font-size: 20px;
+		border-radius: 10px;        
+	}
+
+	button:active{
+	    background-color: #cfcfcf;
+	    box-shadow: 0 5px #666;
+	    transform: translateY(4px);  
+   }
+
+	button:hover
+	{
+	    background-color: #cfcfcf;
+	    color: white;
+	    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+    button#switch{
+		border-radius:20%;
+		background:
+	}
+	
+    #myVideo{
+		width:100%;
+		height:auto;
+	}
+
+    #logo{
+		background-color:#00cccc;
+		right:0;
+		top:10;
+		color:white;
+		font-size:3em;
+		padding:10px 20px;
+		position:absolute;
+	} 
+	#showTime{
+		background-color:#66cccc;
+		left:0;
+		top:10;
+		color:white;
+		font-size:3em;
+		padding:10px 20px;
+		position:absolute;
+	}
+	#info{
+		right:450px;
+		top:10px;;
+		position:absolute;
+	}
+	#top{
+		background-color:black;
+	}
+	#zhaopian{
+	    display:flex;
+	    height:150px;
+        width:1000px;
+    }
+	img{
+		height:150px;
+		width:120px;
+	}
+	#dibu{
+		background-color:#339999;
+	} 
+  
+	.photo-container {  
+	    position: relative; 
+	  /* 根据需要设置每个照片的容器的样式 */  
+	}  
+	  
+	.photo-container p {  
+	    position: absolute;  
+	    top: 100px; /* 调整名字与照片之间的距离 */  
+	    left: 25px; /* 调整名字的水平位置 */  
+	}
+ </style>
+
+	 <script src="ks.js">
+	 </script>
+
+</head>
+
+<body>
+   <div id="top">
+     <div id="zhaopian">
+		   <div class="photo-container"> 
+			<p>
+				<font size="5" color="white">曾俊菁</font>
+			</p>
+				<img src="https://liumiaomiao20213665.github.io/menber images/zjj.jpg">
+		   </div>
+
+		   <div class="photo-container">  
+			<p>
+				<font size="5" color="white">黄丹丹</font>
+			</p>
+			<img src="https://liumiaomiao20213665.github.io/menber images/hdd.jpg">
+		   </div>
+
+		   <div class="photo-container">  
+			<p>
+				<font size="5" color="white">刘苗苗</font>
+			</p>
+				<img src="https://liumiaomiao20213665.github.io/menber images/lmm.jpg">
+		   </div>
+
+		   <div class="photo-container">  
+			<p>
+				<font size="5" color="white">钟雅婷</font>
+			</p>
+				<img src="https://liumiaomiao20213665.github.io/menber images/zyt.jpg">
+		   </div>
+
+		   <div class="photo-container">  
+			<p>
+				<font size="5" color="white">余振宇</font>
+			</p>
+				<img src="https://liumiaomiao20213665.github.io/menber images/yzy.jpg">
+		   </div>
+
+			<div id="info">
+				<p align="center">
+				  <font size="7" color="white">
+				  JavaWeb第九组<br>LinuxCMD-6.mp3
+				  </font>
+				</p>
+			</div>
+	
+	 </div>
+   </div>
+
+    <div id="showTime">
+    </div>
+
+    <div id="logo">
+    </div>
+
+	<div id="stage">
+		<video id="myVideo"> </video>
+		<audio id="myAudio"></audio>
+	</div>
+    
+    <div id="duration">
+	</div>
+
+	<div id="audioduration" style="display:none">
+	</div>
+
+    <div id="UI">
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+		<button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="switch">音频</button>
+    </div>
+
+     <div id="dibu">
+		<p>  
+			 <font size="6" color="white">  
+			 学校：江西科技师范大学    班级：JAVA软件制作方向2班<br>  
+			 小组成员：曾俊菁（组长）、黄丹丹、刘苗苗、钟雅婷、余振宇  
+			 </font>  
+		 </p> 
+     </div>
+
+	  
+    <script>
+		var Model = {
+			i : 0,
+			isVideo : true,
+			UI : {
+				stageDom : document.getElementById("stage"),
+				myVideoDom : document.getElementById("myVideo"),
+			    myAudioDom : document.getElementById("myAudio"),
+				logoDom : document.getElementById("logo"),
+				showTimeDom : document.getElementById("showTime"),
+				//下面是按钮
+				playDom : document.getElementById("play"),
+			    stopDom : document.getElementById("stop"),  
+				prevDom : document.getElementById("prev"),
+				nextDom : document.getElementById("next"),
+				switchDom : document.getElementById("switch"),
+				},  
+			play : function(){
+				Model.isVideo?Model.UI.myVideoDom.play():Model.UI.myAudioDom.play();
+				Model.mediaInfo();
+				Model.timeInfo();
+				Model.startTimeUpdate();
+			},
+			pause : function(){
+				Model.isVideo?Model.UI.myVideoDom.pause():Model.UI.myAudioDom.pause();
+			},
+			prev : function(){
+				let myVideo = Model.UI.myVideoDom;
+				let myAudio = Model.UI.myAudioDom;
+                if(Model.isVideo){
+					if (Model.i==0)
+					{
+						Model.i = mediaData.videoFileNames.length-1;
+					}else{
+						Model.i--;
+					}
+				}else{
+				   if(Model.i==0)
+					{
+						Model.i=mediaData.podFileStruct.length-1;
+					}else{
+						Model.i--;
+					}
+				}
+				
+				Model.loadMedia();
+				Model.play();
+			},
+			next : function(){
+				let myVideo = Model.UI.myVideoDom;
+				let myAudio = Model.UI.myAudioDom;
+				if(Model.isVideo){
+					if (Model.i==mediaData.videoFileNames.length-1)
+					{
+						Model.i=0;
+					}else{
+						Model.i++;
+					}
+				}
+			    else{
+				    if(Model.i==mediaData.podFileStruct.length-1)
+					{
+						Model.i=0;
+					}else{
+						Model.i++;
+					}
+				}
+				Model.loadMedia();
+				Model.play();
+
+			},
+			mediaInfo : function(){
+			   let mediaNum = Model.isVideo ? mediaData.videoFileNames.length:mediaData.podFileStruct.length ;
+			   if (Model.isVideo)
+			   {
+                Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
+			   }else{
+			    Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) +'-'+mediaData.podFileStruct[Model.i].FileName + '/' + '共' + mediaData.podFileStruct.length ;
+			   }
+			},
+			timeInfo : function(){
+			   let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+			   let mediaTime = parseInt(mediaElem.duration);  
+			   let currentTime = parseInt(mediaElem.currentTime); 
+			   Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
+			},
+			startTimeUpdate : function() {  
+               let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+               mediaElem.addEventListener('timeupdate', function() {  
+               Model.timeInfo();  
+             });  
+            },
+			loadMedia : function(){
+				let i = Model.i;
+				if(Model.isVideo){ 
+					Model.UI.myVideoDom.src = mediaData.videoPath + mediaData.videoFileNames[i];
+				}else{
+					Model.UI.myAudioDom.src = mediaData.podPath + mediaData.podFileStruct[i].FileName;
+				}					
+				   Model.timeInfo() ;
+				   Model.mediaInfo() ;
+			},
+			init : function(){  
+				//视频UI全屏设置
+                Model.UI.browserWidth = document.body.clientWidth;
+                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
+                //预读媒体文件
+				Model.loadMedia(0);
+				//初始化UI的控件的onclick属性
+				Model.UI.playDom.onclick = function() {
+					Model.play();
+				};
+				Model.UI.stopDom.onclick = function() {
+					Model.pause();
+				};
+				Model.UI.prevDom.onclick = function() {
+					Model.prev();
+				};
+				Model.UI.nextDom.onclick = function() {
+					Model.next();
+				};
+				Model.UI.switchDom.onclick = function(){ 
+					Model.pause();                                   //中断当前播放的视频或音频
+					let isVideo = !Model.isVideo;   
+					Model.isVideo = isVideo;  
+					let videoElements = [Model.UI.myVideoDom,Model.UI.durationDom];  
+					let audioElement = Model.UI.audiodurationDom;  
+					videoElements.forEach(el => el.style.display = isVideo ? "" : "none");  
+					audioElement.style.display = isVideo ? "none" : "";  
+					this.textContent = isVideo ? "音频" : "视频"; 
+					Model.loadMedia();
+                };
+			},//init结束
+		};//Model结束
+		Model.init();
+
+		//动态生成9个视频按钮
+        Model.UI.durationDom = document.getElementById('duration');
+        Model.UI.durationDom.items = [];
+        for (let i = 0; i < 9; i++) {
+            let tempDom = document.createElement('input');
+            tempDom.type = 'button';
+			tempDom.className = 'video-button'; 
+            tempDom.value += 'NO.' + (i + 1);
+            Model.UI.durationDom.items[i] = tempDom;
+            Model.UI.durationDom.appendChild(tempDom);
+        }
+        for (let i = 0; i < 9; i++) {
+            Model.UI.durationDom.items[i].onclick = function() {
+            Model.UI.myVideoDom.currentTime = (myVideo.duration / 9) * i;
+            };
+        }
+
+		// 动态生成16个音频按钮  
+		Model.UI.audiodurationDom = document.getElementById('audioduration');  
+		Model.UI.audiodurationDom.items = [];  		  
+		  for (let i = 0; i < 16; i++) {  
+			let AudiotempDom = document.createElement('input');  
+			AudiotempDom.type = 'button';  
+			AudiotempDom.className = 'audio-button';  
+			AudiotempDom.value = mediaData.podFileStruct[0].title[i];
+		// 为前3个按钮添加特定的样式  
+			if (i < 3) {  
+				AudiotempDom.style.marginTop = "100px";  
+			}  
+			Model.UI.audiodurationDom.items[i] = AudiotempDom;
+			Model.UI.audiodurationDom.appendChild(AudiotempDom);  
+		}      
+		// 为每个按钮添加点击事件处理程序  
+		  for (let i = 0; i < 16; i++) {  
+			  Model.UI.audiodurationDom.items[i].onclick = function() {  
+		      Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[0].time[i][0];  
+			  let endTime = mediaData.podFileStruct[0].time[i][1];              // 获取结束时间  
+			  let audioElement = Model.UI.myAudioDom;                           // 保存对<audio>元素的引用  
+		 // 检查当前时间是否达到每个段落指定时长，如果是则停止播放  
+			  let checkTime = setInterval(() => {  
+				 if (audioElement.currentTime >= endTime) {  
+					audioElement.pause();                                      // 停止播放  
+					clearInterval(checkTime);                                  // 清除定时器  
+				 }  
+				}, 100);                                                       // 每100毫秒检查一次当前时间  
+			  };  
+			}	  
+		
+    </script>
+</body>
+
+</html>
