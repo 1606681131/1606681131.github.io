@@ -4,8 +4,8 @@ var mediaData = {
 		picFiles:["myFace1.jpg","myFace2.jpg","myFace3.jpg","myFace4.jpg","myFace5.jpg","myFace6.jpg"],
         names:["曾俊菁","黄丹丹","刘苗苗","李老师","钟雅婷","余振宇"],
 	},
-    podPath: "https:/jxzy-dmxy.jxstnu.edu.cn/",     //音频文件的路径
-    videoPath: "https:/jxzy-dmxy.jxstnu.edu.cn/tedVideos/",				//视频文件的路径
+    podPath: "https://jxzy-dmxy.jxstnu.edu.cn/",     //音频文件的路径
+    videoPath: "https://jxzy-dmxy.jxstnu.edu.cn/tedVideos/",				//视频文件的路径
     podFileStruct: [{								//包含十个对象，每个对象表示一个音频文件的信息
         FileName: "linuxCMD-6.mp3",					//音频文件名称
         title: [									//音频文件标题
