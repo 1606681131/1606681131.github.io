@@ -12,13 +12,21 @@
 	   font-size:1.5em;
 	}
 	.video-button{
+	   font-size: 30px;
+	   height:90px;
+	   width:120px;
 	   margin-right:20px;
 	   margin-top:10px;
 	}
 	.audio-button {
+	    height:120px;
+		width:400px;
 		margin-right: 20px;
 		margin-top:20px;
     }
+	.audio-button3{
+	   margin-top:100px;
+	}
 
 	button
 	{
@@ -27,8 +35,8 @@
 		transition-duration: 0.4s;     
 		background-color:#d9d9d9;
 		margin-top:10px;
-		width: 100px;
-		height: 55px;
+		width: 120px;
+		height: 80px;
 		font-size: 30px;
 		border-radius: 20px;        
 	}
@@ -37,7 +45,7 @@
 	    background-color: #cfcfcf;
 	    box-shadow: 0 5px #666;
 	    transform: translateY(4px);  
-   }
+    }
 
 	button:hover
 	{
@@ -78,14 +86,14 @@
 	    background-color:black;
 		font-size:3em;
 		text-align:center;
-		height:120px;
+		height:150px;
 	}
 	#dibu{
 		background-color:#7d7d7d;
 	} 
-     #images{
+    #images{
 	 background-color:black;
-	 height:350px;
+	 height:340px;
 	 }
 	.image {
 	  width: auto;
@@ -215,24 +223,25 @@
 			},
 			mediaInfo : function(){
 			   let mediaNum = Model.isVideo ? mediaData.videoFileNames.length:mediaData.podFileStruct.length ;
-			   if (Model.isVideo) {
-		                Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
+			   if (Model.isVideo)
+			   {
+                Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
 			   }else{
-				  Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) +'-'+mediaData.podFileStruct[Model.i].FileName + '/' + '共' + mediaData.podFileStruct.length ;
-				 }
+			    Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) +'-'+mediaData.podFileStruct[Model.i].FileName + '/' + '共' + mediaData.podFileStruct.length ;
+			   }
 			},
 			timeInfo : function(){
-				let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
-			        let mediaTime = parseInt(mediaElem.duration);  
-				let currentTime = parseInt(mediaElem.currentTime); 
-			        Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
+			   let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+			   let mediaTime = parseInt(mediaElem.duration);  
+			   let currentTime = parseInt(mediaElem.currentTime); 
+			   Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
 			},
 			startTimeUpdate : function() {  
-			        let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
-			         mediaElem.addEventListener('timeupdate', function() {  
-			        Model.timeInfo();  
-	             });  
-	            },
+               let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+               mediaElem.addEventListener('timeupdate', function() {  
+               Model.timeInfo();  
+             });  
+            },
 			loadMedia : function(){
 				let i = Model.i;
 				if(Model.isVideo){ 
@@ -245,9 +254,9 @@
 			},
 			init : function(){  
 				//视频UI全屏设置
-	                Model.UI.browserWidth = document.body.clientWidth;
-	                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
-	                //预读媒体文件
+                Model.UI.browserWidth = document.body.clientWidth;
+                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
+                //预读媒体文件
 				Model.loadMedia(0);
 				//初始化UI的控件的onclick属性
 				Model.UI.playDom.onclick = function() {
@@ -277,19 +286,18 @@
 		};//Model结束
 		Model.init();
         
-	 // 动态生成6张照片
-  	
-      Model.UI.imageDom = document.getElementById('images');
-	  Model.UI.imageDom.items = [];
-	  for(let i = 0; i < 6 ; i++){
-	    let imgtempDom = document.createElement('img');
-		imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
-		imgtempDom.className = 'image';
-		Model.UI.imageDom.items[i] = imgtempDom;
-		Model.UI.imageDom.appendChild(imgtempDom);
-	  }
+		// 动态生成6张照片
+		  Model.UI.imageDom = document.getElementById('images');
+		  Model.UI.imageDom.items = [];
+		  for(let i = 0; i < 6 ; i++){
+			let imgtempDom = document.createElement('img');
+			imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
+			imgtempDom.className = 'image';
+			Model.UI.imageDom.items[i] = imgtempDom;
+			Model.UI.imageDom.appendChild(imgtempDom);
+		  }
 
-	//动态生成9个视频按钮
+		//动态生成9个视频按钮
         Model.UI.durationDom = document.getElementById('duration');
         Model.UI.durationDom.items = [];
         for (let i = 0; i < 9; i++) {
@@ -306,39 +314,26 @@
             };
         }
         
-
-		
 		// 动态生成7个音频按钮  
 		Model.UI.audiodurationDom = document.getElementById('audioduration');  
 		Model.UI.audiodurationDom.items = [];  		  
-		  for (let i = 0; i < 7; i++) {  
+		  for (let i = 0 ; i < mediaData.podFileStruct[Model.i].title.length ; i++) {  
 			let AudiotempDom = document.createElement('input');  
 			AudiotempDom.type = 'button';  
 			AudiotempDom.className = 'audio-button';  
-			AudiotempDom.value = mediaData.podFileStruct[0].title[i];
+			AudiotempDom.value = mediaData.podFileStruct[Model.i].title[i];
 		// 为前3个按钮添加特定的样式  
 			if (i < 3) {  
-				AudiotempDom.style.marginTop = "100px";  
-			}  
+               AudiotempDom.classList.add("audio-button3");			}
 			Model.UI.audiodurationDom.items[i] = AudiotempDom;
 			Model.UI.audiodurationDom.appendChild(AudiotempDom);  
-		}      
 		// 为每个按钮添加点击事件处理程序  
-		  for (let i = 0; i < 7; i++) {  
-			  Model.UI.audiodurationDom.items[i].onclick = function() {  
-		      Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[0].time[i][0];  
-			  let endTime = mediaData.podFileStruct[0].time[i][1];              // 获取结束时间  
-			  let audioElement = Model.UI.myAudioDom;                           // 保存对<audio>元素的引用  
-		 // 检查当前时间是否达到每个段落指定时长，如果是则停止播放  
-			  let checkTime = setInterval(() => {  
-				 if (audioElement.currentTime >= endTime) {  
-					audioElement.pause();                                      // 停止播放  
-					clearInterval(checkTime);                                  // 清除定时器  
-				 }  
-				}, 100);                                                       // 每100毫秒检查一次当前时间  
-			  };  
-			}	  
-		
+			Model.UI.audiodurationDom.items[i].onclick = function() {  
+		    Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[Model.i].time[i][0];
+			window.setTimeout(Model.pause,(mediaData.podFileStruct[Model.i].time[i][1]-mediaData.podFileStruct[Model.i].time[i][0])*1000)
+		}      
+	 }
+			  
     </script>
 </body>
 
