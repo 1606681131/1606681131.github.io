@@ -165,8 +165,8 @@
 				prevDom : document.getElementById("prev"),
 				nextDom : document.getElementById("next"),
 				switchDom : document.getElementById("switch"),
-				audiodurationDom : document.getElementById("audioduration"),
-				durationDom : document.getElementById("duration")
+				audiodurationDom : document.getElementById("audioduration"),  //音频进度按钮
+				durationDom : document.getElementById("duration")             //视频进度按钮
 				},  
 			play : function(){
 				Model.isVideo?Model.UI.myVideoDom.play():Model.UI.myAudioDom.play();
@@ -347,14 +347,11 @@
 					Model.image();
 					Model.loadMedia();
 					Model.Mediainfo();
-
               };
 		},//init结束
 	};//Model结束
-		Model.init();
+	Model.init();
         
-
-
     </script>
 </body>
 
