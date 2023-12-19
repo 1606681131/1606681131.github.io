@@ -215,25 +215,24 @@
 			},
 			mediaInfo : function(){
 			   let mediaNum = Model.isVideo ? mediaData.videoFileNames.length:mediaData.podFileStruct.length ;
-			   if (Model.isVideo)
-			   {
-                Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
+			   if (Model.isVideo) {
+		                Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) + '/' + '共' + mediaNum;
 			   }else{
-			    Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) +'-'+mediaData.podFileStruct[Model.i].FileName + '/' + '共' + mediaData.podFileStruct.length ;
-			   }
+				  Model.UI.logoDom.textContent = 'NO.' + (Model.i+1) +'-'+mediaData.podFileStruct[Model.i].FileName + '/' + '共' + mediaData.podFileStruct.length ;
+				 }
 			},
 			timeInfo : function(){
-			   let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
-			   let mediaTime = parseInt(mediaElem.duration);  
-			   let currentTime = parseInt(mediaElem.currentTime); 
-			   Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
+				let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+			        let mediaTime = parseInt(mediaElem.duration);  
+				let currentTime = parseInt(mediaElem.currentTime); 
+			        Model.UI.showTimeDom.textContent =  currentTime + ' s' + '/' + mediaTime + ' s'  ;  
 			},
 			startTimeUpdate : function() {  
-               let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
-               mediaElem.addEventListener('timeupdate', function() {  
-               Model.timeInfo();  
-             });  
-            },
+			        let mediaElem = Model.isVideo ? Model.UI.myVideoDom : Model.UI.myAudioDom;  
+			         mediaElem.addEventListener('timeupdate', function() {  
+			        Model.timeInfo();  
+	             });  
+	            },
 			loadMedia : function(){
 				let i = Model.i;
 				if(Model.isVideo){ 
@@ -246,9 +245,9 @@
 			},
 			init : function(){  
 				//视频UI全屏设置
-                Model.UI.browserWidth = document.body.clientWidth;
-                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
-                //预读媒体文件
+	                Model.UI.browserWidth = document.body.clientWidth;
+	                Model.UI.myVideoDom.style.width = Model.UI.browserWidth + "px";
+	                //预读媒体文件
 				Model.loadMedia(0);
 				//初始化UI的控件的onclick属性
 				Model.UI.playDom.onclick = function() {
