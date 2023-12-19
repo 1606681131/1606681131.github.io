@@ -91,7 +91,7 @@
 	#dibu{
 		background-color:#7d7d7d;
 	} 
-    #images{
+    #image{
 	 background-color:black;
 	 height:340px;
 	 }
@@ -115,9 +115,7 @@
 		LinuxCMD-6.mp3
 	</div>
 
-    <div id="images">
-	
-	</div>
+    <div id="image">  </div>
 		
     <div id="showTime"></div>
 
@@ -160,6 +158,7 @@
 			    myAudioDom : document.getElementById("myAudio"),
 				logoDom : document.getElementById("logo"),
 				showTimeDom : document.getElementById("showTime"),
+				imageDom : document.getElementById("image"),
 				//下面是按钮
 				playDom : document.getElementById("play"),
 			    stopDom : document.getElementById("stop"),  
@@ -256,6 +255,7 @@
 				}					
 				   Model.timeInfo() ;
 				   Model.mediaInfo() ;
+				   Model.image();
 			},
 
 			audioduration : function(){
@@ -282,8 +282,18 @@
 				}      
 			 }
 			},
-			duration : function(){
-			
+            image : function(){
+				Model.UI.imageDom.items = [];
+				while(Model.UI.imageDom.firstChild){
+				Model.UI.imageDom.removeChild(Model.UI.imageDom.firstChild);
+				}
+				  for(let i = 0; i < mediaData.authors.names.length ; i++){
+					let imgtempDom = document.createElement('img');
+					imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
+					imgtempDom.className = 'image';
+					Model.UI.imageDom.items[i] = imgtempDom;
+					Model.UI.imageDom.appendChild(imgtempDom);
+				  }
 			},
 			init : function(){  
 				//视频UI全屏设置
@@ -314,6 +324,7 @@
 					audioElement.style.display = isVideo ? "none" : "";  
 					this.textContent = isVideo ? "音频" : "视频"; 
 					Model.audioduration();
+					Model.image();
 					Model.loadMedia();
 
               };
@@ -321,17 +332,6 @@
 	};//Model结束
 		Model.init();
         
-		// 动态生成6张照片
-		  Model.UI.imageDom = document.getElementById('images');
-		  Model.UI.imageDom.items = [];
-		  for(let i = 0; i < mediaData.authors.names.length ; i++){
-			let imgtempDom = document.createElement('img');
-			imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
-			imgtempDom.className = 'image';
-			Model.UI.imageDom.items[i] = imgtempDom;
-			Model.UI.imageDom.appendChild(imgtempDom);
-		  }
-
 		//动态生成9个视频按钮
         Model.UI.durationDom.items = [];
         for (let i = 0; i < 9; i++) {
@@ -347,10 +347,7 @@
             Model.UI.myVideoDom.currentTime = (myVideo.duration / 9) * i;
             };
         }
-        
 
-		
-			  
     </script>
 </body>
 
