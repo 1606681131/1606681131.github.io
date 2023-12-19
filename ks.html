@@ -279,25 +279,18 @@
 		Model.init();
         
 	 // 动态生成6张照片
+  	
       Model.UI.imageDom = document.getElementById('images');
 	  Model.UI.imageDom.items = [];
-	  const imageSrcs = [
-	        'https://1606681131.github.io/images/myFace1.jpg',
-			'https://1606681131.github.io/images/myFace2.jpg',
-			'https://1606681131.github.io/images/myFace3.jpg',
-			'https://1606681131.github.io/images/myFace4.jpg',
-			'https://1606681131.github.io/images/myFace5.jpg',
-			'https://1606681131.github.io/images/myFace6.jpg'
-	  ];
 	  for(let i = 0; i < 6 ; i++){
 	    let imgtempDom = document.createElement('img');
-		imgtempDom.src = imageSrcs[i];
+		imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
 		imgtempDom.className = 'image';
 		Model.UI.imageDom.items[i] = imgtempDom;
 		Model.UI.imageDom.appendChild(imgtempDom);
 	  }
 
-		//动态生成9个视频按钮
+	//动态生成9个视频按钮
         Model.UI.durationDom = document.getElementById('duration');
         Model.UI.durationDom.items = [];
         for (let i = 0; i < 9; i++) {
