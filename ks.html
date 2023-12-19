@@ -166,6 +166,8 @@
 				prevDom : document.getElementById("prev"),
 				nextDom : document.getElementById("next"),
 				switchDom : document.getElementById("switch"),
+				audiodurationDom : document.getElementById("audioduration"),
+				durationDom : document.getElementById("duration")
 				},  
 			play : function(){
 				Model.isVideo?Model.UI.myVideoDom.play():Model.UI.myAudioDom.play();
@@ -193,6 +195,8 @@
 					}else{
 						Model.i--;
 					}
+										Model.audioduration();
+
 				}
 				
 				Model.loadMedia();
@@ -216,10 +220,11 @@
 					}else{
 						Model.i++;
 					}
+						Model.audioduration();
+
 				}
 				Model.loadMedia();
 				Model.play();
-
 			},
 			mediaInfo : function(){
 			   let mediaNum = Model.isVideo ? mediaData.videoFileNames.length:mediaData.podFileStruct.length ;
@@ -252,6 +257,34 @@
 				   Model.timeInfo() ;
 				   Model.mediaInfo() ;
 			},
+
+			audioduration : function(){
+			Model.UI.audiodurationDom.items = [];
+				  while(Model.UI.audiodurationDom.firstChild){
+					Model.UI.audiodurationDom.removeChild(Model.UI.audiodurationDom.firstChild);
+				}
+				  for (let i = 0 ; i < mediaData.podFileStruct[Model.i].title.length ; i++) {  
+					let AudiotempDom = document.createElement('input');  
+					AudiotempDom.type = 'button';  
+					AudiotempDom.className = 'audio-button';				
+					AudiotempDom.value = mediaData.podFileStruct[Model.i].title[i];
+				// 为前3个按钮添加特定的样式  
+					if (i < 3) {  
+					   AudiotempDom.classList.add("audio-button3");
+					}
+
+					Model.UI.audiodurationDom.items[i] = AudiotempDom;
+					Model.UI.audiodurationDom.appendChild(AudiotempDom);  
+				// 为每个按钮添加点击事件处理程序  
+					Model.UI.audiodurationDom.items[i].onclick = function() {  
+					Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[Model.i].time[i][0];
+					window.setTimeout(Model.pause,(mediaData.podFileStruct[Model.i].time[i][1]-mediaData.podFileStruct[Model.i].time[i][0])*1000)
+				}      
+			 }
+			},
+			duration : function(){
+			
+			},
 			init : function(){  
 				//视频UI全屏设置
                 Model.UI.browserWidth = document.body.clientWidth;
@@ -280,10 +313,12 @@
 					videoElements.forEach(el => el.style.display = isVideo ? "" : "none");  
 					audioElement.style.display = isVideo ? "none" : "";  
 					this.textContent = isVideo ? "音频" : "视频"; 
+					Model.audioduration();
 					Model.loadMedia();
-                };
-			},//init结束
-		};//Model结束
+
+              };
+		},//init结束
+	};//Model结束
 		Model.init();
         
 		// 动态生成6张照片
@@ -298,7 +333,6 @@
 		  }
 
 		//动态生成9个视频按钮
-        Model.UI.durationDom = document.getElementById('duration');
         Model.UI.durationDom.items = [];
         for (let i = 0; i < 9; i++) {
             let tempDom = document.createElement('input');
@@ -314,25 +348,8 @@
             };
         }
         
-		// 动态生成7个音频按钮  
-		Model.UI.audiodurationDom = document.getElementById('audioduration');  
-		Model.UI.audiodurationDom.items = [];  		  
-		  for (let i = 0 ; i < mediaData.podFileStruct[Model.i].title.length ; i++) {  
-			let AudiotempDom = document.createElement('input');  
-			AudiotempDom.type = 'button';  
-			AudiotempDom.className = 'audio-button';  
-			AudiotempDom.value = mediaData.podFileStruct[Model.i].title[i];
-		// 为前3个按钮添加特定的样式  
-			if (i < 3) {  
-               AudiotempDom.classList.add("audio-button3");			}
-			Model.UI.audiodurationDom.items[i] = AudiotempDom;
-			Model.UI.audiodurationDom.appendChild(AudiotempDom);  
-		// 为每个按钮添加点击事件处理程序  
-			Model.UI.audiodurationDom.items[i].onclick = function() {  
-		    Model.UI.myAudioDom.currentTime = mediaData.podFileStruct[Model.i].time[i][0];
-			window.setTimeout(Model.pause,(mediaData.podFileStruct[Model.i].time[i][1]-mediaData.podFileStruct[Model.i].time[i][0])*1000)
-		}      
-	 }
+
+		
 			  
     </script>
 </body>
