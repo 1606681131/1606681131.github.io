@@ -181,21 +181,19 @@
 				let myVideo = Model.UI.myVideoDom;
 				let myAudio = Model.UI.myAudioDom;
                 if(Model.isVideo){
-					if (Model.i==0)
+					if (Model.i == 0)
 					{
 						Model.i = mediaData.videoFileNames.length-1;
 					}else{
 						Model.i--;
 					}
 				}else{
-				   if(Model.i==0)
+				   if(Model.i == 0)
 					{
 						Model.i=mediaData.podFileStruct.length-1;
 					}else{
 						Model.i--;
 					}
-										Model.audioduration();
-
 				}
 				
 				Model.loadMedia();
@@ -219,8 +217,6 @@
 					}else{
 						Model.i++;
 					}
-						Model.audioduration();
-
 				}
 				Model.loadMedia();
 				Model.play();
@@ -250,14 +246,16 @@
 				let i = Model.i;
 				if(Model.isVideo){ 
 					Model.UI.myVideoDom.src = mediaData.videoPath + mediaData.videoFileNames[i];
+					Model.duration();
 				}else{
 					Model.UI.myAudioDom.src = mediaData.podPath + mediaData.podFileStruct[i].FileName;
+					Model.audioduration();
 				}					
 				   Model.timeInfo() ;
 				   Model.mediaInfo() ;
 				   Model.image();
 			},
-
+ 
 			audioduration : function(){
 			Model.UI.audiodurationDom.items = [];
 				  while(Model.UI.audiodurationDom.firstChild){
@@ -281,6 +279,26 @@
 					window.setTimeout(Model.pause,(mediaData.podFileStruct[Model.i].time[i][1]-mediaData.podFileStruct[Model.i].time[i][0])*1000)
 				}      
 			 }
+			},
+			duration : function(){
+			 //动态生成9个视频按钮
+				Model.UI.durationDom.items = [];
+				while(Model.UI.durationDom.firstChild){
+					Model.UI.durationDom.removeChild(Model.UI.durationDom.firstChild);
+				}
+				for (let i = 0; i < 9; i++) {
+					let tempDom = document.createElement('input');
+					tempDom.type = 'button';
+					tempDom.className = 'video-button'; 
+					tempDom.value += 'NO.' + (i + 1);
+					Model.UI.durationDom.items[i] = tempDom;
+					Model.UI.durationDom.appendChild(tempDom);
+				}
+				for (let i = 0; i < 9; i++) {
+					Model.UI.durationDom.items[i].onclick = function() {
+					Model.UI.myVideoDom.currentTime = (myVideo.duration / 9) * i;
+					};
+				}
 			},
             image : function(){
 				Model.UI.imageDom.items = [];
@@ -316,6 +334,9 @@
 				};
 				Model.UI.switchDom.onclick = function(){ 
 					Model.pause();                                   //中断当前播放的视频或音频
+					if(Model.i != 0){                                //让视频的索引不影响音频的索引
+					   Model.i = 0;
+					}
 					let isVideo = !Model.isVideo;   
 					Model.isVideo = isVideo;  
 					let videoElements = [Model.UI.myVideoDom,Model.UI.durationDom];  
@@ -323,30 +344,16 @@
 					videoElements.forEach(el => el.style.display = isVideo ? "" : "none");  
 					audioElement.style.display = isVideo ? "none" : "";  
 					this.textContent = isVideo ? "音频" : "视频"; 
-					Model.audioduration();
 					Model.image();
 					Model.loadMedia();
+					Model.Mediainfo();
 
               };
 		},//init结束
 	};//Model结束
 		Model.init();
         
-		//动态生成9个视频按钮
-        Model.UI.durationDom.items = [];
-        for (let i = 0; i < 9; i++) {
-            let tempDom = document.createElement('input');
-            tempDom.type = 'button';
-			tempDom.className = 'video-button'; 
-            tempDom.value += 'NO.' + (i + 1);
-            Model.UI.durationDom.items[i] = tempDom;
-            Model.UI.durationDom.appendChild(tempDom);
-        }
-        for (let i = 0; i < 9; i++) {
-            Model.UI.durationDom.items[i].onclick = function() {
-            Model.UI.myVideoDom.currentTime = (myVideo.duration / 9) * i;
-            };
-        }
+
 
     </script>
 </body>
