@@ -289,7 +289,7 @@
 		// 动态生成6张照片
 		  Model.UI.imageDom = document.getElementById('images');
 		  Model.UI.imageDom.items = [];
-		  for(let i = 0; i < 6 ; i++){
+		  for(let i = 0; i < mediaData.authors.names.length ; i++){
 			let imgtempDom = document.createElement('img');
 			imgtempDom.src = mediaData.authors.path + mediaData.authors.picFiles[i];
 			imgtempDom.className = 'image';
