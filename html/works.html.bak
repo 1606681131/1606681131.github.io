@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/works.css" />
+	</head>
+	<body>
+		<div class="top">
+			<div class="name">
+				<img src="../img/签名.jpg"  class="signature-img"/>
+			</div>
+			<div class="nav">
+			  <ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="experience.html" class="exp">Entertainment experience</a></li>
+				<li><a href="works.html">Introduction</a></li>
+				<li><a href="quote.html">Quote</a></li>
+				
+			  </ul>
+			</div>		
+		</div>
+		<div class="novel">
+			<h1>Albums</h1>
+			<ul>
+				<li>
+					<div class="image_title">
+						<a href="#">Going Seventeen</a>			
+					</div>
+					<img src="../img/01.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">AI1</a>			
+					</div>
+					<img src="../img/02.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">TEEN，AGE</a>			
+					</div>
+					<img src="../img/03.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">YOU MAKE MY WAY</a>			
+					</div>
+					<img src="../img/04.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">YOU MAKE MY DAWN</a>			
+					</div>
+					<img src="../img/05.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">AN Ode</a>			
+					</div>
+					<img src="../img/06.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">Heng:garae</a>			
+					</div>
+					<img src="../img/07.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">Your Choice</a>			
+					</div>
+					<img src="../img/08.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">Attacca</a>			
+					</div>
+					<img src="../img/09.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">Face the Sun</a>			
+					</div>
+					<img src="../img/10.jpg"/></a>
+				</li>
+                <li>
+					<div class="image_title">
+						<a href="#">SECTOR17</a>			
+					</div>
+					<img src="../img/11.jpg"/></a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="#">Second Wind</a>			
+					</div>
+					<img src="../img/12.jpg"/></a>
+				</li>
+			</ul>
+		</div>
+		<div class="biography">
+			<h1>Hip Hop Team</h1>
+			<img src="../img/S.Coups.jpg" class="solo-img"/>
+			<img src="../img/Wonwoo.jpg" class="solo-img"/>
+			<img src="../img/Mingyu.jpg" class="solo-img"/>
+			<img src="../img/Vernon.jpg" class="solo-img"/>
+
+			<h1>Performance Team</h1>
+			<img src="../img/Jun.jpg" class="solo-img"/>
+			<img src="../img/Hoshi.jpg" class="solo-img"/>
+			<img src="../img/The8.jpg" class="solo-img"/>
+			<img src="../img/Dino.jpg" class="solo-img"/>
+
+			<h1>Vocal Team</h1>
+			<img src="../img/Jenoghan.jpg" class="solo-img"/>
+			<img src="../img/Joshua.jpg" class="solo-img"/>
+			<img src="../img/Woozo.jpg" class="solo-img"/>
+			<img src="../img/DK.jpg" class="solo-img"/>
+			<img src="../img/Boo.jpg" class="solo-img"/>
+
+        </div>
+	</body>
+</html>
