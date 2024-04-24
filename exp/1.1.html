@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <!-- 
+   增加这句后，可以看到浏览器的DevTools面板的模拟移动设备状态的变化
+  -->
+  <link rel="stylesheet" href="myCSS.css" > 
+  
+  <title>Welcome to my Korean TV drama</title>
+<style type="text/css">
+	body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    background-color: #f4f4f4;  
+}  
+  
+header {  
+    background-color: #333;  
+    color: white;  
+    padding: 10px;  
+    text-align: center;  
+}  
+  
+nav ol {  
+    list-style-type: none;  
+    padding: 0;  
+    margin: 0;  
+}  
+  
+nav ol li {  
+    display: inline-block;  
+    margin-right: 10px;  
+}  
+  
+nav ol li a {  
+    color: white;  
+    text-decoration: none;  
+    padding: 5px 10px;  
+    border: 1px solid white;  
+    border-radius: 5px;  
+}  
+  
+nav ol li a:hover {  
+    background-color: #555;  
+}  
+  
+main {  
+    margin: 20px;  
+}  
+  
+
+  
+#logoFace img {  
+    width: 270px; /*海报尺寸*/
+    height: 359px;  
+    margin-right: 10px;  
+    float: left;  
+}  
+  
+#watching {  
+    clear: both;  
+    text-align: center;  
+    margin-top: 20px;  
+    font-size: 18px;  
+}  
+  
+footer {  
+    background-color: #333;  
+    color: white;  
+    text-align: center;  
+    padding: 10px;  
+    position: fixed;  
+    bottom: 0;  
+    width: 100%;  
+}
+
+</style>
+ </head> 
+ <body>
+  <header>
+	<p id="lessonName" >
+	<font size="10">
+     《JuneChing追剧清单》</font>
+    </p> 
+  <nav>
+   <ol id ="listMenus">
+ 
+   </ol>
+  </nav>
+  </header>
+
+   <main>
+    <div id="logoFace">
+      <img id="TVFace" src="D:/abc/myface/顶楼.jpg">
+      <img id="TVFace" src="D:/abc/myface/鬼怪.jpg">
+      <img id="TVFace" src="D:/abc/myface/僵尸校园.jpg">
+	  <img id="TVFace" src="D:/abc/myface/W两个世界.jpg">
+	  <p id="watching">
+	   
+	  </p>
+    </div>
+
+   </main>
+
+  <footer> 
+   	<p id="footerInfo">
+	<font size="10" color="">一个精彩的剧情，值得你追随始终！</font><br>
+	CopyRight from 曾俊菁 江西科技师范大学 
+	</p>
+  </footer> 
+  
+ <script src="myJs.js" > 
+ </script>
+ </body>
+</html>
