@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+  <title>基于SSM的家庭财务管理系统设计与实现</title>
+<style>
+  body {
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  header, nav, main, footer {
+    text-align: center; 
+    margin: 10px 0;
+  }
+
+  header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+  }
+
+  main {
+    background-color: white;
+    height: auto;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+
+  p#title {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 8px 15px;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 1rem;
+    text-indent: 2em;
+    margin-bottom: 1em;
+    text-align: left;
+  }
+
+  nav > * { 
+    flex: 0 1 auto; 
+    margin: 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    header, nav, main, footer {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav {
+      flex-direction: row;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    button {
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    nav > * {
+      flex-basis: auto; 
+    }
+  }
+</style>
+ </head>
+ <body>
+ <div class="container">
+	
+
+	<header>
+		<p id="title">
+			基于SSM的家庭财务管理系统设计与实现
+		</p>
+	</header>
+
+		<nav>
+			<button>
+				<p>
+					导航1
+				</p>    
+			</button>
+			<button>
+				<p>
+				 导航2
+				</p>    
+			</button>
+			<button>
+				<p>
+				  导航3
+				</p>    
+			 </button>
+		</nav>
+  <div  class="paragraph">
+   <main>
+   <p>
+	本研究旨在设计并实现一个基于SSM框架的家庭财务管理系统，以提高家庭理财的效率和准确性。系统将提供用户友好的界面，使家庭成员能够轻松记录和管理日常收支、制定财务预算、进行财务分析，并跟踪心愿单等财务目标。通过采用Spring、Spring MVC和MyBatis等技术，本系统将实现数据的高效管理和操作的安全性，同时提供灵活的报表功能，帮助用户做出更明智的财务决策，优化家庭财务状况。
+   </p>
+  </main>
+  </div>
+  <footer> 
+ 	CopyRight from 曾俊菁 江西科技师范大学 2022--2025
+  </footer> 
+  <script> 
+    var UI = {};
+    UI.appWidth = window.innerWidth > 800 ? 800 : window.innerWidth ;
+    UI.appHeight = window.innerHeight;
+ 	const LETTERS = 22 ;
+	const baseFont = UI.appWidth / LETTERS;
+ 
+    //通过把body对象的宽度和高度设置为设备/屏幕的宽度和高度，实现全屏。
+    //通过CSS对子对象百分比（纵向）的配合，从而实现响应式设计的目标。
+    document.body.style.width = UI.appWidth - 1*baseFont + "px" ;
+    document.body.style.height = UI.appHeight - 4*baseFont + "px";
+ </script>
+ </div>
+ </body>
+</html>

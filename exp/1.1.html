@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1">
+  <!-- 
+   增加这句后，可以看到浏览器的DevTools面板的模拟移动设备状态的变化
+  -->
+ <style>
+	* {
+	  margin: 10px;
+	  text-align: center;
+	}
+
+	body, header, nav, main, footer {
+	  border: 3px solid gray;
+	  font-size: inherit; /* 使用inherit继承body的字体大小 */
+	}
+
+	header, nav, footer {
+	  height: 10%;
+	}
+
+	main {
+	  height: 70%;
+	  position: relative;
+	  border: 3px solid gray; /* 移动到此处，避免重复 */
+	}
+
+	#box {
+	  position: absolute;
+	  right: 0;
+	  width: 100px;
+	}
+
+	#aid {
+	  position: absolute;
+	  border: 3px solid black;
+	  top: 0;
+	  left: calc(100% - 620px); /* 使用calc简化定位 */
+	}
+
+	#tvface {
+	  width: 80%;
+	  height: 80%;
+	  border: 1px solid black;
+	  background-color: #cccccc;
+	  margin: auto; /* 移除margin，因为已经设置在*选择器中 */
+	}
+
+	button, .btn {
+	  width: 100px;
+	  height: 50px;
+	  font-size: 20px; /* 移除.btn类，其样式与button相同 */
+	}
+</style>
+  <title>基于SSM的家庭财务管理系统设计与实现</title>
+ </head> 
+ <body>
+  <header>
+    <h1>
+      基于SSM的家庭财务管理系统设计与实现
+    </h1>  
+  </header>
+  <div  class="paragraph">
+   <main>
+   <p>
+本研究旨在设计并实现一个基于SSM框架的家庭财务管理系统，以提高家庭理财的效率和准确性。系统将提供用户友好的界面，使家庭成员能够轻松记录和管理日常收支、制定财务预算、进行财务分析，并跟踪心愿单等财务目标。通过采用Spring、Spring MVC和MyBatis等技术，本系统将实现数据的高效管理和操作的安全性，同时提供灵活的报表功能，帮助用户做出更明智的财务决策，优化家庭财务状况。
+   </p>
+  </main>
+</div> 
+  <footer> 
+ 	CopyRight from 曾俊菁 江西科技师范大学 2022--2025
+  </footer> 
+ </body>
+</html>
